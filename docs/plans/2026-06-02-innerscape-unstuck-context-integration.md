@@ -34,7 +34,7 @@ Completed locally:
 - Unstuck integration contract, landing/live-app implications, verifier, and HTML decision dashboard exist on `codex/innerscape-unstuck-context`.
 - Innerscape is paused behind a merge hold screen on the Innerscape `codex/innerscape-unstuck-context` worktree.
 - Offline Unstuck protocol docs have been imported into Innerscape under `docs/unstuck/`.
-- Innerscape shared context contract, deterministic Unstuck coach core, backend Hub context route, backend coach route, and calendar/inbox consent plan exist on the Innerscape `codex/innerscape-unstuck-context` worktree.
+- Innerscape shared context contract, deterministic Unstuck coach core, backend Hub context route, backend coach route, persisted coaching receipts, Hub Unstuck panel, and calendar/inbox consent plan exist on the Innerscape `codex/innerscape-unstuck-context` worktree.
 - The literal EF-COACH live app branch `codex/innerscape-unstuck-context` adds an optional Innerscape context bridge:
   - `GET /api/context-status` returns redacted disabled, available, or unavailable status.
   - `POST /api/coach` can append redacted read-only Innerscape context when `INNERSCAPE_CONTEXT_ENABLED=true` and `INNERSCAPE_CONTEXT_URL` are configured.
@@ -45,9 +45,8 @@ Not completed yet:
 
 - The EF-COACH bridge is local only; it has not been pushed, deployed, or configured on the live host.
 - Google Calendar and Gmail are not connected in production.
-- Coaching receipts are not yet persisted back into Innerscape.
 - The normal Innerscape app surface is intentionally unavailable until the merge gates pass.
-- Innerscape DB-backed Hub route tests still need a local PostgreSQL-backed verification pass.
+- Innerscape DB-backed Hub route tests still need a reachable local PostgreSQL-backed verification pass.
 
 ## First Feature: What Is Real Right Now?
 

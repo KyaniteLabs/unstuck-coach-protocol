@@ -14,7 +14,7 @@ Online Unstuck is not the merge target. Keep the online app up and unchanged unl
 
 Innerscape is paused behind a merge hold screen until offline Unstuck is fully absorbed.
 
-As of June 2, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, and a verifier for the hold/merge decision. Calendar and inbox connectors are still consent-gated future work, and coaching receipts are not persisted yet.
+As of June 2, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, persisted coaching receipts, a Hub Unstuck panel, and a verifier for the hold/merge decision. Calendar and inbox connectors are still consent-gated future work.
 
 ## Current Live-App Bridge
 

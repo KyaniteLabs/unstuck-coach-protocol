@@ -61,6 +61,8 @@ As of June 2, 2026, the Innerscape `codex/innerscape-unstuck-context` worktree h
 - imported offline Unstuck protocol docs under `docs/unstuck/`
 - shared deterministic Unstuck coach logic at `packages/shared/src/unstuck-coach.ts`
 - a context-aware coach route at `POST /api/v1/hub/unstuck/coach`
+- persisted coaching receipts plus proof updates under `/api/v1/hub/unstuck/receipts`
+- a Hub Unstuck panel at `apps/mobile/components/hub/UnstuckCoachPanel.tsx`
 - a merge verifier at `scripts/verify-unstuck-merge.mjs`
 
 ## Live Unstuck App

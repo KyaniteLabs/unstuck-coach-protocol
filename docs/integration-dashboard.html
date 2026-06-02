@@ -589,7 +589,7 @@
             </div>
             <div class="verdict-grid" aria-label="Topline metrics">
               <div class="summary-tile"><span>Offline merge target</span><strong>100%</strong><small>offline Unstuck absorbed into Innerscape</small></div>
-              <div class="summary-tile"><span>Current local progress</span><strong>70%</strong><small>hold screen, imported protocol, coach core</small></div>
+              <div class="summary-tile"><span>Current local progress</span><strong>82%</strong><small>hold screen, protocol, coach core, receipts</small></div>
               <div class="summary-tile"><span>Connector safety</span><strong>Read</strong><small>writes require approval</small></div>
               <div class="summary-tile"><span>Online Unstuck</span><strong>Freeze</strong><small>keep up, do not touch</small></div>
             </div>
@@ -598,15 +598,16 @@
           <div class="panel status-stack" data-tags="engineering live open">
             <div>
               <p class="kicker">Offline merge progress</p>
-              <div class="progress-ring" style="--pct:70" aria-label="70 percent merged">
-                <div><strong>70%</strong><span>merged</span></div>
+              <div class="progress-ring" style="--pct:82" aria-label="82 percent merged">
+                <div><strong>82%</strong><span>merged</span></div>
               </div>
             </div>
             <div class="bars" aria-label="Merge readiness bars">
               <div class="bar-row"><span>Documentation</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div>
               <div class="bar-row"><span>Innerscape hold</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div>
               <div class="bar-row"><span>Shared coach core</span><div class="bar"><span style="--value:90%;--color:var(--teal)"></span></div><strong>90</strong></div>
-              <div class="bar-row"><span>Backend context/coach</span><div class="bar"><span style="--value:75%;--color:var(--blue)"></span></div><strong>75</strong></div>
+              <div class="bar-row"><span>Backend context/coach</span><div class="bar"><span style="--value:90%;--color:var(--blue)"></span></div><strong>90</strong></div>
+              <div class="bar-row"><span>Receipts</span><div class="bar"><span style="--value:90%;--color:var(--green)"></span></div><strong>90</strong></div>
               <div class="bar-row"><span>Calendar/inbox</span><div class="bar"><span style="--value:20%;--color:var(--saffron)"></span></div><strong>20</strong></div>
               <div class="bar-row"><span>Online app changes</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div>
             </div>
@@ -679,9 +680,9 @@
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Online Unstuck stays live</strong><p>Keep as the public proof; do not change it.</p></div><span>0 risk</span></div>
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Innerscape hold screen</strong><p>The app surface is paused while the merge is incomplete.</p></div><span>low</span></div>
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Offline protocol imported</strong><p>Identity, rules, examples, safety boundaries, and verifier contracts are now Innerscape-owned docs.</p></div><span>medium</span></div>
-              <div class="timeline-item"><span class="pill done">done</span><div><strong>Context-aware coach route</strong><p>Innerscape can build a snapshot and return one Unstuck move plus a receipt draft.</p></div><span>low</span></div>
+              <div class="timeline-item"><span class="pill done">done</span><div><strong>Context-aware coach route</strong><p>Innerscape can build a snapshot and return one Unstuck move plus a persisted receipt.</p></div><span>low</span></div>
+              <div class="timeline-item"><span class="pill done">done</span><div><strong>Receipts write back</strong><p>Prompt, sources, move, proof, and result now have an Innerscape storage path.</p></div><span>low</span></div>
               <div class="timeline-item"><span class="pill open">open</span><div><strong>Calendar/inbox connectors</strong><p>Read-only hard anchors and live obligations behind consent.</p></div><span>medium</span></div>
-              <div class="timeline-item"><span class="pill open">open</span><div><strong>Receipts write back</strong><p>Store prompt, sources, move, proof, and result in Innerscape.</p></div><span>medium</span></div>
               <div class="timeline-item"><span class="pill blocked">gate</span><div><strong>Offline merge complete</strong><p>Stop maintaining offline Unstuck separately once Innerscape owns the full mode.</p></div><span>high</span></div>
             </div>
           </div>
@@ -689,8 +690,8 @@
 
         <section id="merge" class="section grid-3">
           <div class="chart-panel" data-tags="engineering done"><h3>Completed</h3><div class="bars"><div class="bar-row"><span>Docs plan</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Merge hold</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Contract verifier</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Online freeze rule</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div></div></div>
-          <div class="chart-panel" data-tags="engineering open"><h3>Offline merge work</h3><div class="bars"><div class="bar-row"><span>Context/coach route</span><div class="bar"><span style="--value:75%;--color:var(--blue)"></span></div><strong>75</strong></div><div class="bar-row"><span>Offline absorption</span><div class="bar"><span style="--value:70%;--color:var(--teal)"></span></div><strong>70</strong></div><div class="bar-row"><span>Adapters</span><div class="bar"><span style="--value:20%;--color:var(--saffron)"></span></div><strong>20</strong></div></div></div>
-          <div class="chart-panel" data-tags="engineering live open privacy"><h3>Still not real</h3><div class="bars"><div class="bar-row"><span>Online app changes</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>OAuth consent</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>Receipts DB</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div></div></div>
+          <div class="chart-panel" data-tags="engineering open"><h3>Offline merge work</h3><div class="bars"><div class="bar-row"><span>Context/coach route</span><div class="bar"><span style="--value:90%;--color:var(--blue)"></span></div><strong>90</strong></div><div class="bar-row"><span>Offline absorption</span><div class="bar"><span style="--value:82%;--color:var(--teal)"></span></div><strong>82</strong></div><div class="bar-row"><span>Adapters</span><div class="bar"><span style="--value:20%;--color:var(--saffron)"></span></div><strong>20</strong></div></div></div>
+          <div class="chart-panel" data-tags="engineering live open privacy"><h3>Still not real</h3><div class="bars"><div class="bar-row"><span>Online app changes</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>OAuth consent</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>Production deploy</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div></div></div>
         </section>
 
         <section id="decisions" class="section panel" data-tags="product landing live engineering privacy open docs">
@@ -700,7 +701,7 @@
             <div class="decision-row" data-tags="landing done"><div><strong>Innerscape landing</strong><p>Taken down behind a merge hold screen.</p></div><div>Innerscape = paused until offline Unstuck is built in.</div><div><span class="pill done">hold active</span></div><div>No public product promise until the merge gates pass.</div></div>
             <div class="decision-row" data-tags="live open done"><div><strong>Online Unstuck app</strong><p>Keep it up and untouched.</p></div><div>Not the merge target.</div><div><span class="pill done">frozen</span></div><div>No deploy/config changes.</div></div>
             <div class="decision-row" data-tags="privacy open"><div><strong>Calendar/inbox</strong><p>Read-only first.</p></div><div>Writes require explicit approval.</div><div><span class="pill next">required</span></div><div>Consent docs before OAuth.</div></div>
-            <div class="decision-row" data-tags="engineering open"><div><strong>Context storage</strong><p>Receipts write back to Innerscape.</p></div><div>Prompt, sources, move, proof, result.</div><div><span class="pill open">next build</span></div><div>Needs DB migration.</div></div>
+            <div class="decision-row" data-tags="engineering done"><div><strong>Context storage</strong><p>Receipts write back to Innerscape.</p></div><div>Prompt, sources, move, proof, result.</div><div><span class="pill done">implemented</span></div><div>DB-backed verification waits on reachable Postgres.</div></div>
             <div class="decision-row" data-tags="docs done"><div><strong>Decision artifacts</strong><p>Use HTML dashboards for review.</p></div><div>Markdown remains source; HTML is the human review surface.</div><div><span class="pill done">adopted</span></div><div>This file is the pattern.</div></div>
           </div>
         </section>
@@ -732,7 +733,7 @@
         </section>
 
         <section class="foot" data-tags="docs">
-          <p><strong>Decision now:</strong> online Unstuck stays untouched; Innerscape is paused behind a hold screen; offline Unstuck merges 100% into Innerscape. <strong>Do not claim yet:</strong> Gmail/Calendar are connected in production, the deployed app is context-connected, or the offline merge is complete.</p>
+          <p><strong>Decision now:</strong> online Unstuck stays untouched; Innerscape is paused behind a hold screen; offline Unstuck merges 100% into Innerscape. <strong>Do not claim yet:</strong> Gmail/Calendar are connected in production, the deployed app is context-connected, production deploy is complete, or the offline merge is complete.</p>
         </section>
       </main>
     </div>

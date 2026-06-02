@@ -6,6 +6,7 @@ const checks = [
     phrases: [
       'Innerscape is the system of record',
       'Unstuck is the coaching layer',
+      'Current Live-App Bridge',
       'What Is Real Right Now',
       'Calendar and inbox are reality inputs',
       'External writes require explicit approval',
@@ -27,6 +28,8 @@ const checks = [
     phrases: [
       'Unstuck should not disappear into Innerscape',
       'The live Unstuck app should stay up during the merge',
+      'optional Innerscape context bridge',
+      'not deployed, not pushed',
       'Do not claim calendar or inbox integration is live',
       'Default to both',
     ],
@@ -38,6 +41,7 @@ const checks = [
       'Keep both public surfaces',
       'Landing pages',
       'Literal app that is up',
+      'EF-COACH local bridge module',
       'Decision queue',
     ],
   },

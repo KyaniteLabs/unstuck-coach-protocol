@@ -230,6 +230,7 @@
 
       .progress-ring {
         --pct: 42;
+        position: relative;
         width: min(310px, 100%);
         aspect-ratio: 1;
         margin: 4px auto 12px;
@@ -565,7 +566,7 @@
         <div class="brand">
           <strong>Unstuck + Innerscape</strong>
           <span>Integration dashboard</span>
-          <span>Generated from merge docs, code status, and documented memory preference.</span>
+          <span>Generated from merge docs, code/test status, and documented memory preference.</span>
         </div>
         <nav aria-label="Dashboard sections">
           <a href="#verdict">Verdict</a>
@@ -587,8 +588,8 @@
               <p class="lede">Unstuck remains the immediate coaching surface. Innerscape becomes the context and memory layer. Calendar and inbox become read-only reality inputs first; external writes stay behind explicit approval.</p>
             </div>
             <div class="verdict-grid" aria-label="Topline metrics">
-              <div class="summary-tile"><span>Merge completion</span><strong>45%</strong><small>first technical slice plus cross-repo docs</small></div>
-              <div class="summary-tile"><span>Docs coverage</span><strong>90%</strong><small>contract, plan, PRD, consent, dashboard</small></div>
+              <div class="summary-tile"><span>Merge completion</span><strong>55%</strong><small>local live-app bridge plus cross-repo docs</small></div>
+              <div class="summary-tile"><span>Docs coverage</span><strong>93%</strong><small>contract, plan, PRD, consent, dashboard</small></div>
               <div class="summary-tile"><span>Connector safety</span><strong>Read</strong><small>writes require approval</small></div>
               <div class="summary-tile"><span>Live app status</span><strong>Keep</strong><small>do not retire yet</small></div>
             </div>
@@ -597,16 +598,16 @@
           <div class="panel status-stack" data-tags="engineering live open">
             <div>
               <p class="kicker">Current integration score</p>
-      <div class="progress-ring" style="--pct:45" aria-label="45 percent merged">
-                <div><strong>45%</strong><span>merged</span></div>
+              <div class="progress-ring" style="--pct:55" aria-label="55 percent merged">
+                <div><strong>55%</strong><span>merged</span></div>
               </div>
             </div>
             <div class="bars" aria-label="Merge readiness bars">
-              <div class="bar-row"><span>Documentation</span><div class="bar"><span style="--value:90%;--color:var(--green)"></span></div><strong>90</strong></div>
-              <div class="bar-row"><span>Shared contract</span><div class="bar"><span style="--value:70%;--color:var(--teal)"></span></div><strong>70</strong></div>
+              <div class="bar-row"><span>Documentation</span><div class="bar"><span style="--value:93%;--color:var(--green)"></span></div><strong>93</strong></div>
+              <div class="bar-row"><span>Shared contract</span><div class="bar"><span style="--value:75%;--color:var(--teal)"></span></div><strong>75</strong></div>
               <div class="bar-row"><span>Backend context</span><div class="bar"><span style="--value:55%;--color:var(--blue)"></span></div><strong>55</strong></div>
               <div class="bar-row"><span>Calendar/inbox</span><div class="bar"><span style="--value:20%;--color:var(--saffron)"></span></div><strong>20</strong></div>
-              <div class="bar-row"><span>Live app bridge</span><div class="bar"><span style="--value:10%;--color:var(--coral)"></span></div><strong>10</strong></div>
+              <div class="bar-row"><span>Live app bridge</span><div class="bar"><span style="--value:40%;--color:var(--teal)"></span></div><strong>40</strong></div>
             </div>
           </div>
         </section>
@@ -634,7 +635,7 @@
                 <tbody>
                   <tr><td>Headline</td><td>External executive function for the moment you are stuck.</td><td><span class="pill open">copy update</span></td></tr>
                   <tr><td>Primary CTA</td><td>Try a stuck sentence or open the live coach.</td><td><span class="pill next">keep focused</span></td></tr>
-                  <tr><td>Integration note</td><td>Designed to use Innerscape, calendar, and inbox context.</td><td><span class="pill open">add after reality check</span></td></tr>
+                  <tr><td>Integration note</td><td>Designed to use Innerscape, calendar, and inbox context.</td><td><span class="pill open">add after deployed bridge</span></td></tr>
                 </tbody>
               </table>
             </div>
@@ -661,12 +662,12 @@
           <div class="panel" data-tags="live product privacy open">
             <p class="kicker">Literal app that is up</p>
             <h2>Do not retire it.</h2>
-            <p>The live Unstuck app is proof that the coaching loop works. It should remain available while Innerscape-hosted Unstuck catches up. The migration target is behavior parity, not brand consolidation.</p>
+            <p>The live Unstuck app is proof that the coaching loop works. It should remain available while Innerscape-hosted Unstuck catches up. A local EF-COACH branch now has an opt-in redacted Innerscape bridge and `/api/context-status`, but production is not connected to Gmail/Calendar.</p>
             <div class="matrix" aria-label="Live app decision matrix">
               <div class="quadrant" style="--color:var(--green)"><strong>Keep live now</strong><ul><li>Preserves working proof</li><li>Protects demo traffic</li><li>Maintains standalone fallback</li></ul></div>
-              <div class="quadrant" style="--color:var(--blue)"><strong>Bridge next</strong><ul><li>Optional Innerscape context pull</li><li>Calendar/inbox read-only later</li><li>Receipts write back after consent</li></ul></div>
+              <div class="quadrant" style="--color:var(--blue)"><strong>Bridge landed locally</strong><ul><li>Optional Innerscape context pull</li><li>Redacted status endpoint</li><li>Deploy/config review next</li></ul></div>
               <div class="quadrant" style="--color:var(--saffron)"><strong>Do not claim yet</strong><ul><li>No live Gmail claim</li><li>No auto calendar edits</li><li>No full merge claim</li></ul></div>
-              <div class="quadrant" style="--color:var(--coral)"><strong>Retire only after</strong><ul><li>Parity tests pass</li><li>Live app bridge is stable</li><li>Fallback coaching remains intact</li></ul></div>
+              <div class="quadrant" style="--color:var(--coral)"><strong>Retire only after</strong><ul><li>Parity tests pass</li><li>Deployed bridge is stable</li><li>Fallback coaching remains intact</li></ul></div>
             </div>
           </div>
 
@@ -676,7 +677,8 @@
             <div class="timeline">
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Standalone Unstuck stays live</strong><p>Keep as the public proof and fallback.</p></div><span>0 risk</span></div>
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Innerscape read-only context endpoint</strong><p>First backend slice exists in the worktree.</p></div><span>low</span></div>
-              <div class="timeline-item"><span class="pill next">next</span><div><strong>Unstuck calls Innerscape context</strong><p>Live app gains optional context pull with graceful fallback.</p></div><span>medium</span></div>
+              <div class="timeline-item"><span class="pill done">local</span><div><strong>Unstuck calls redacted Innerscape context</strong><p>EF-COACH branch adds an opt-in bridge with graceful fallback and privacy tests.</p></div><span>medium</span></div>
+              <div class="timeline-item"><span class="pill blocked">gate</span><div><strong>Deploy and configure bridge</strong><p>Review endpoint, allowlist, timeout, rollback, and public copy before live host changes.</p></div><span>medium</span></div>
               <div class="timeline-item"><span class="pill open">open</span><div><strong>Calendar/inbox connectors</strong><p>Read-only hard anchors and live obligations behind consent.</p></div><span>medium</span></div>
               <div class="timeline-item"><span class="pill open">open</span><div><strong>Receipts write back</strong><p>Store prompt, sources, move, proof, and result in Innerscape.</p></div><span>medium</span></div>
               <div class="timeline-item"><span class="pill blocked">gate</span><div><strong>Retirement or dual-surface decision</strong><p>Only after parity and live traffic evidence.</p></div><span>high</span></div>
@@ -685,9 +687,9 @@
         </section>
 
         <section id="merge" class="section grid-3">
-          <div class="chart-panel" data-tags="engineering done"><h3>Completed</h3><div class="bars"><div class="bar-row"><span>Docs plan</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Contract verifier</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Shared types</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Innerscape PRD</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div></div></div>
-          <div class="chart-panel" data-tags="engineering open"><h3>In progress</h3><div class="bars"><div class="bar-row"><span>Context endpoint</span><div class="bar"><span style="--value:55%;--color:var(--blue)"></span></div><strong>55</strong></div><div class="bar-row"><span>Adapters</span><div class="bar"><span style="--value:35%;--color:var(--saffron)"></span></div><strong>35</strong></div><div class="bar-row"><span>Dashboard docs</span><div class="bar"><span style="--value:85%;--color:var(--teal)"></span></div><strong>85</strong></div></div></div>
-          <div class="chart-panel" data-tags="engineering live open"><h3>Not merged yet</h3><div class="bars"><div class="bar-row"><span>Live bridge</span><div class="bar"><span style="--value:10%;--color:var(--coral)"></span></div><strong>10</strong></div><div class="bar-row"><span>OAuth consent</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>Receipts DB</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div></div></div>
+          <div class="chart-panel" data-tags="engineering done"><h3>Completed</h3><div class="bars"><div class="bar-row"><span>Docs plan</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Contract verifier</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Shared types</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>EF bridge tests</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div></div></div>
+          <div class="chart-panel" data-tags="engineering open"><h3>In progress</h3><div class="bars"><div class="bar-row"><span>Context endpoint</span><div class="bar"><span style="--value:55%;--color:var(--blue)"></span></div><strong>55</strong></div><div class="bar-row"><span>Live bridge local</span><div class="bar"><span style="--value:40%;--color:var(--teal)"></span></div><strong>40</strong></div><div class="bar-row"><span>Adapters</span><div class="bar"><span style="--value:35%;--color:var(--saffron)"></span></div><strong>35</strong></div></div></div>
+          <div class="chart-panel" data-tags="engineering live open privacy"><h3>Not live yet</h3><div class="bars"><div class="bar-row"><span>Production bridge</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>OAuth consent</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>Receipts DB</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div></div></div>
         </section>
 
         <section id="decisions" class="section panel" data-tags="product landing live engineering privacy open docs">
@@ -695,7 +697,7 @@
           <h2>Recommended defaults unless evidence changes.</h2>
           <div class="decision-list">
             <div class="decision-row" data-tags="landing open"><div><strong>Landing architecture</strong><p>Keep two pages, align the story.</p></div><div>Unstuck = immediate coach. Innerscape = life OS.</div><div><span class="pill next">recommended</span></div><div>Update copy after source truth check.</div></div>
-            <div class="decision-row" data-tags="live open"><div><strong>Live Unstuck app</strong><p>Keep it up during merge.</p></div><div>Retire only after parity and live traffic evidence.</div><div><span class="pill next">recommended</span></div><div>Add bridge, not replacement.</div></div>
+            <div class="decision-row" data-tags="live open done"><div><strong>Live Unstuck app</strong><p>Keep it up during merge.</p></div><div>Local bridge exists; retire only after parity and live traffic evidence.</div><div><span class="pill next">recommended</span></div><div>Deploy after endpoint/privacy review.</div></div>
             <div class="decision-row" data-tags="privacy open"><div><strong>Calendar/inbox</strong><p>Read-only first.</p></div><div>Writes require explicit approval.</div><div><span class="pill next">required</span></div><div>Consent docs before OAuth.</div></div>
             <div class="decision-row" data-tags="engineering open"><div><strong>Context storage</strong><p>Receipts write back to Innerscape.</p></div><div>Prompt, sources, move, proof, result.</div><div><span class="pill open">next build</span></div><div>Needs DB migration.</div></div>
             <div class="decision-row" data-tags="docs done"><div><strong>Decision artifacts</strong><p>Use HTML dashboards for review.</p></div><div>Markdown remains source; HTML is the human review surface.</div><div><span class="pill done">adopted</span></div><div>This file is the pattern.</div></div>
@@ -713,6 +715,8 @@
               <a href="../PROJECT_INSTRUCTIONS.md"><span>Project instructions</span><span class="pill done">source</span></a>
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/PRD.md"><span>Innerscape PRD context-layer update</span><span class="pill done">source</span></a>
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/docs/plans/2026-06-02-calendar-inbox-consent.md"><span>Calendar and inbox consent plan</span><span class="pill done">source</span></a>
+              <a href="file:///Users/simongonzalezdecruz/workspaces/skool_competitions/.worktrees/unstuck-innerscape-context/EF-COACH/live-demo/lib/innerscape-context.mjs"><span>EF-COACH local bridge module</span><span class="pill done">source</span></a>
+              <a href="file:///Users/simongonzalezdecruz/workspaces/skool_competitions/.worktrees/unstuck-innerscape-context/EF-COACH/live-demo/test/innerscape-context.test.mjs"><span>EF-COACH bridge privacy tests</span><span class="pill done">source</span></a>
             </div>
           </div>
 
@@ -725,7 +729,7 @@
         </section>
 
         <section class="foot" data-tags="docs">
-          <p><strong>Allowed public claim now:</strong> Designed to use Innerscape, calendar, and inbox context. <strong>Do not claim yet:</strong> Gmail/Calendar are connected in production or the apps are fully merged.</p>
+          <p><strong>Allowed public claim now:</strong> Designed to use Innerscape, calendar, and inbox context; local branch bridge in progress. <strong>Do not claim yet:</strong> Gmail/Calendar are connected in production, the deployed app is context-connected, or the apps are fully merged.</p>
         </section>
       </main>
     </div>

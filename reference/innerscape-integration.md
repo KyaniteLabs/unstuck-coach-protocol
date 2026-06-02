@@ -8,6 +8,16 @@ Innerscape is the system of record for user state, captures, tasks, projects, bo
 
 Unstuck is the coaching layer that turns visible context into one humane next move.
 
+## Current Live-App Bridge
+
+As of June 2, 2026, the literal Unstuck live app has a local EF-COACH branch bridge, not a production claim.
+
+- `INNERSCAPE_CONTEXT_ENABLED=true` and `INNERSCAPE_CONTEXT_URL` are both required before the app pulls context.
+- Non-local context URLs require `INNERSCAPE_CONTEXT_ALLOWLIST`.
+- `/api/context-status` returns redacted availability and count-level summary only.
+- `/api/coach` may append a redacted read-only Innerscape context summary to the model prompt.
+- Raw user ids, prompts, calendar titles, inbox subjects, evidence, histories, tokens, and API keys must not appear in the public status, prompt context, or usage events.
+
 ## What Is Real Right Now
 
 When the user asks for help, Unstuck may pull:

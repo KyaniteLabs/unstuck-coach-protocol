@@ -26,6 +26,25 @@ Human review surface:
 - `docs/integration-dashboard.html` turns this plan and the integration reference docs into a filterable HTML/CSS decision dashboard with scorecards, timelines, matrices, and source links.
 - `reference/landing-live-app-implications.md` keeps the Unstuck landing page, Innerscape landing page, and live Unstuck app aligned while the merge is incomplete.
 
+## Implementation Status: June 2, 2026
+
+Completed locally:
+
+- Unstuck integration contract, landing/live-app implications, verifier, and HTML decision dashboard exist on `codex/innerscape-unstuck-context`.
+- Innerscape shared context contract, backend Hub route, and calendar/inbox consent plan exist on the Innerscape `codex/innerscape-unstuck-context` worktree.
+- The literal EF-COACH live app branch `codex/innerscape-unstuck-context` adds an optional Innerscape context bridge:
+  - `GET /api/context-status` returns redacted disabled, available, or unavailable status.
+  - `POST /api/coach` can append redacted read-only Innerscape context when `INNERSCAPE_CONTEXT_ENABLED=true` and `INNERSCAPE_CONTEXT_URL` are configured.
+  - Non-local context URLs require `INNERSCAPE_CONTEXT_ALLOWLIST`.
+  - Usage events stay count-level and must not include raw prompts, tokens, user ids, calendar titles, inbox subjects, evidence, or histories.
+
+Not completed yet:
+
+- The EF-COACH bridge is local only; it has not been pushed, deployed, or configured on the live host.
+- Google Calendar and Gmail are not connected in production.
+- Coaching receipts are not yet persisted back into Innerscape.
+- Innerscape DB-backed Hub route tests still need a local PostgreSQL-backed verification pass.
+
 ## First Feature: What Is Real Right Now?
 
 The user opens Unstuck from inside Innerscape and says something like:
@@ -894,8 +913,9 @@ Manual smoke:
 
 1. Finish Task 1 in Unstuck to lock the coaching/product contract.
 2. Finish Tasks 2-6 in Innerscape backend.
-3. Finish Task 7 in Innerscape mobile.
-4. Finish Task 8 before any real Google Calendar or Gmail OAuth work.
-5. Keep `docs/integration-dashboard.html` updated whenever the merge status, landing-page recommendation, live-app state, or decision queue changes.
+3. Keep the EF-COACH bridge local until the deployment endpoint, allowlist, timeout, and rollback plan are reviewed.
+4. Finish Task 7 in Innerscape mobile.
+5. Finish Task 8 before any real Google Calendar or Gmail OAuth work.
+6. Keep `docs/integration-dashboard.html` updated whenever the merge status, landing-page recommendation, live-app state, or decision queue changes.
 
 This order keeps the sharp Unstuck behavior intact while letting Innerscape become the context layer that makes the coach smarter.

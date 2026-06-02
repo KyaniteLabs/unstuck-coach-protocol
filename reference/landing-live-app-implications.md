@@ -55,10 +55,18 @@ The live Unstuck app should stay up during the merge.
 
 It is the working proof that the coaching behavior is sharp. Do not retire it until the Innerscape-hosted mode reaches behavior parity and can pass the same first-reply acceptance checks.
 
+Current implementation status on June 2, 2026:
+
+- The EF-COACH local branch `codex/innerscape-unstuck-context` adds an optional Innerscape context bridge for the literal live app.
+- The bridge is opt-in with `INNERSCAPE_CONTEXT_ENABLED=true` plus `INNERSCAPE_CONTEXT_URL`.
+- `/api/context-status` returns only redacted availability and count-level context.
+- `/api/coach` can add redacted read-only Innerscape context to the model prompt when the bridge is available.
+- The bridge is not deployed, not pushed, and not connected to production Google Calendar or Gmail.
+
 Recommended live-app state:
 
 - Keep the existing standalone app/demo available.
-- Add a small integration notice only after the Innerscape context endpoint is usable from the live app.
+- Add a small integration notice only after the Innerscape context endpoint is usable from the deployed live app.
 - Add "context connected" states later, not before they are real.
 - Keep the fallback behavior: if Innerscape, calendar, or inbox is unavailable, Unstuck still coaches from the visible prompt.
 
@@ -68,7 +76,7 @@ The live app moves in this order:
 
 1. Standalone Unstuck stays live.
 2. Innerscape exposes read-only context.
-3. Unstuck can optionally pull context from Innerscape.
+3. Unstuck can optionally pull redacted context from Innerscape on a local branch.
 4. Calendar and inbox read-only connectors add hard anchors and live obligations.
 5. Coaching receipts write back to Innerscape.
 6. Only after parity, decide whether Unstuck remains a separate public app, becomes an Innerscape mode, or stays both.

@@ -10,10 +10,11 @@
 
 ## Product Boundary
 
-Unstuck and Innerscape should be both:
+The product boundary is not “maybe merge, maybe not.”
 
-- **Innerscape:** the life OS and memory layer.
-- **Unstuck:** the summonable coaching layer that decides the next humane move.
+- **Online Unstuck:** keep it up and do not touch it during this merge.
+- **Offline Unstuck:** merge it 100% into Innerscape.
+- **Innerscape:** the life OS, memory layer, and merged home for Unstuck mode.
 
 The product promise is:
 
@@ -24,7 +25,7 @@ Calendar and inbox are not dashboards of guilt. They are reality inputs that hel
 Human review surface:
 
 - `docs/integration-dashboard.html` turns this plan and the integration reference docs into a filterable HTML/CSS decision dashboard with scorecards, timelines, matrices, and source links.
-- `reference/landing-live-app-implications.md` keeps the Unstuck landing page, Innerscape landing page, and live Unstuck app aligned while the merge is incomplete.
+- `reference/landing-live-app-implications.md` keeps the online Unstuck app frozen and points the offline Unstuck merge into Innerscape.
 
 ## Implementation Status: June 2, 2026
 
@@ -41,6 +42,7 @@ Completed locally:
 Not completed yet:
 
 - The EF-COACH bridge is local only; it has not been pushed, deployed, or configured on the live host.
+- Offline Unstuck has not yet been fully absorbed into Innerscape as the single maintained product mode.
 - Google Calendar and Gmail are not connected in production.
 - Coaching receipts are not yet persisted back into Innerscape.
 - Innerscape DB-backed Hub route tests still need a local PostgreSQL-backed verification pass.
@@ -911,11 +913,11 @@ Manual smoke:
 
 ## Recommended Execution Order
 
-1. Finish Task 1 in Unstuck to lock the coaching/product contract.
-2. Finish Tasks 2-6 in Innerscape backend.
-3. Keep the EF-COACH bridge local until the deployment endpoint, allowlist, timeout, and rollback plan are reviewed.
-4. Finish Task 7 in Innerscape mobile.
+1. Freeze the online Unstuck app as-is.
+2. Move the offline Unstuck coaching protocol, examples, rules, safety boundaries, and verifier contracts into Innerscape.
+3. Finish Tasks 2-6 in Innerscape backend.
+4. Finish Task 7 in Innerscape mobile as the built-in Unstuck mode.
 5. Finish Task 8 before any real Google Calendar or Gmail OAuth work.
-6. Keep `docs/integration-dashboard.html` updated whenever the merge status, landing-page recommendation, live-app state, or decision queue changes.
+6. Keep `docs/integration-dashboard.html` or the Innerscape landing page updated as the merge tracker.
 
 This order keeps the sharp Unstuck behavior intact while letting Innerscape become the context layer that makes the coach smarter.

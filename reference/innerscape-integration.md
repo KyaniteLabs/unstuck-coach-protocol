@@ -6,11 +6,13 @@ Landing/live-app implications: `reference/landing-live-app-implications.md`.
 
 Innerscape is the system of record for user state, captures, tasks, projects, body signals, reviews, and coaching receipts.
 
-Unstuck is the coaching layer that turns visible context into one humane next move.
+Offline Unstuck merges 100% into Innerscape as the coaching layer that turns visible context into one humane next move.
+
+Online Unstuck is not the merge target. Keep the online app up and unchanged unless there is a separate explicit deploy request.
 
 ## Current Live-App Bridge
 
-As of June 2, 2026, the literal Unstuck live app has a local EF-COACH branch bridge, not a production claim.
+As of June 2, 2026, the literal online Unstuck app has a local EF-COACH branch bridge, not a production claim and not a required step for the offline merge.
 
 - `INNERSCAPE_CONTEXT_ENABLED=true` and `INNERSCAPE_CONTEXT_URL` are both required before the app pulls context.
 - Non-local context URLs require `INNERSCAPE_CONTEXT_ALLOWLIST`.

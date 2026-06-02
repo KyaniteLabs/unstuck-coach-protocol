@@ -5,7 +5,8 @@ const checks = [
     file: 'reference/innerscape-integration.md',
     phrases: [
       'Innerscape is the system of record',
-      'Unstuck is the coaching layer',
+      'Offline Unstuck merges 100% into Innerscape',
+      'Online Unstuck is not the merge target',
       'Current Live-App Bridge',
       'What Is Real Right Now',
       'Calendar and inbox are reality inputs',
@@ -26,20 +27,22 @@ const checks = [
   {
     file: 'reference/landing-live-app-implications.md',
     phrases: [
-      'Unstuck should not disappear into Innerscape',
-      'The live Unstuck app should stay up during the merge',
+      'Online Unstuck stays exactly where it is',
+      'Offline Unstuck should merge 100% into Innerscape',
+      'The live online Unstuck app should stay up and should not be modified during this offline merge',
       'optional Innerscape context bridge',
       'not deployed, not pushed',
       'Do not claim calendar or inbox integration is live',
-      'Default to both',
+      'Default to this split',
     ],
   },
   {
     file: 'docs/integration-dashboard.html',
     phrases: [
       'Unstuck + Innerscape Integration Dashboard',
-      'Keep both public surfaces',
-      'Landing pages',
+      'Freeze online Unstuck',
+      'Merge offline Unstuck into Innerscape 100%',
+      'Offline merge target',
       'Literal app that is up',
       'EF-COACH local bridge module',
       'Decision queue',

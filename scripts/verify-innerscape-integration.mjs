@@ -16,9 +16,29 @@ const checks = [
     file: 'PROJECT_INSTRUCTIONS.md',
     phrases: [
       'reference/innerscape-integration.md',
+      'reference/landing-live-app-implications.md',
       'Innerscape is the system of record',
       'Calendar and inbox are reality inputs',
       'External writes require explicit approval',
+    ],
+  },
+  {
+    file: 'reference/landing-live-app-implications.md',
+    phrases: [
+      'Unstuck should not disappear into Innerscape',
+      'The live Unstuck app should stay up during the merge',
+      'Do not claim calendar or inbox integration is live',
+      'Default to both',
+    ],
+  },
+  {
+    file: 'docs/integration-dashboard.html',
+    phrases: [
+      'Unstuck + Innerscape Integration Dashboard',
+      'Keep both public surfaces',
+      'Landing pages',
+      'Literal app that is up',
+      'Decision queue',
     ],
   },
 ];

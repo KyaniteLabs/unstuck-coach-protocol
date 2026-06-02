@@ -21,6 +21,11 @@ The product promise is:
 
 Calendar and inbox are not dashboards of guilt. They are reality inputs that help Unstuck identify hard anchors, live obligations, and safe parking moves.
 
+Human review surface:
+
+- `docs/integration-dashboard.html` turns this plan and the integration reference docs into a filterable HTML/CSS decision dashboard with scorecards, timelines, matrices, and source links.
+- `reference/landing-live-app-implications.md` keeps the Unstuck landing page, Innerscape landing page, and live Unstuck app aligned while the merge is incomplete.
+
 ## First Feature: What Is Real Right Now?
 
 The user opens Unstuck from inside Innerscape and says something like:
@@ -891,5 +896,6 @@ Manual smoke:
 2. Finish Tasks 2-6 in Innerscape backend.
 3. Finish Task 7 in Innerscape mobile.
 4. Finish Task 8 before any real Google Calendar or Gmail OAuth work.
+5. Keep `docs/integration-dashboard.html` updated whenever the merge status, landing-page recommendation, live-app state, or decision queue changes.
 
 This order keeps the sharp Unstuck behavior intact while letting Innerscape become the context layer that makes the coach smarter.

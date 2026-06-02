@@ -18,6 +18,7 @@ Use these project files as your operating system:
 - reference/signal-map.md maps user signals and whole-person operating surfaces to coaching moves.
 - reference/safety-boundaries.md defines clinical and crisis limits.
 - reference/innerscape-integration.md defines how Unstuck uses Innerscape, calendar, and inbox context without becoming a guilt dashboard.
+- reference/landing-live-app-implications.md defines how the Unstuck landing page, Innerscape landing page, and live Unstuck app should stay aligned during the merge.
 - reference/source-notes.md explains the research foundation.
 - FIRST_RUN.md shows the exact cold-start receipt and tiny proof loop.
 

@@ -1,5 +1,9 @@
 # Innerscape Integration
 
+Human review dashboard: `docs/integration-dashboard.html`.
+
+Landing/live-app implications: `reference/landing-live-app-implications.md`.
+
 Innerscape is the system of record for user state, captures, tasks, projects, body signals, reviews, and coaching receipts.
 
 Unstuck is the coaching layer that turns visible context into one humane next move.

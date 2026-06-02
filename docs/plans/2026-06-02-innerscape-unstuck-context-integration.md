@@ -14,7 +14,7 @@ The product boundary is not “maybe merge, maybe not.”
 
 - **Online Unstuck:** keep it up and do not touch it during this merge.
 - **Offline Unstuck:** merge it 100% into Innerscape.
-- **Innerscape:** the life OS, memory layer, and merged home for Unstuck mode.
+- **Innerscape:** taken down behind a hold screen until it can honestly return as the life OS, memory layer, and merged home for Unstuck mode.
 
 The product promise is:
 
@@ -32,7 +32,9 @@ Human review surface:
 Completed locally:
 
 - Unstuck integration contract, landing/live-app implications, verifier, and HTML decision dashboard exist on `codex/innerscape-unstuck-context`.
-- Innerscape shared context contract, backend Hub route, and calendar/inbox consent plan exist on the Innerscape `codex/innerscape-unstuck-context` worktree.
+- Innerscape is paused behind a merge hold screen on the Innerscape `codex/innerscape-unstuck-context` worktree.
+- Offline Unstuck protocol docs have been imported into Innerscape under `docs/unstuck/`.
+- Innerscape shared context contract, deterministic Unstuck coach core, backend Hub context route, backend coach route, and calendar/inbox consent plan exist on the Innerscape `codex/innerscape-unstuck-context` worktree.
 - The literal EF-COACH live app branch `codex/innerscape-unstuck-context` adds an optional Innerscape context bridge:
   - `GET /api/context-status` returns redacted disabled, available, or unavailable status.
   - `POST /api/coach` can append redacted read-only Innerscape context when `INNERSCAPE_CONTEXT_ENABLED=true` and `INNERSCAPE_CONTEXT_URL` are configured.
@@ -42,9 +44,9 @@ Completed locally:
 Not completed yet:
 
 - The EF-COACH bridge is local only; it has not been pushed, deployed, or configured on the live host.
-- Offline Unstuck has not yet been fully absorbed into Innerscape as the single maintained product mode.
 - Google Calendar and Gmail are not connected in production.
 - Coaching receipts are not yet persisted back into Innerscape.
+- The normal Innerscape app surface is intentionally unavailable until the merge gates pass.
 - Innerscape DB-backed Hub route tests still need a local PostgreSQL-backed verification pass.
 
 ## First Feature: What Is Real Right Now?
@@ -914,10 +916,10 @@ Manual smoke:
 ## Recommended Execution Order
 
 1. Freeze the online Unstuck app as-is.
-2. Move the offline Unstuck coaching protocol, examples, rules, safety boundaries, and verifier contracts into Innerscape.
-3. Finish Tasks 2-6 in Innerscape backend.
+2. Keep Innerscape down behind the merge hold screen.
+3. Move the offline Unstuck coaching protocol, examples, rules, safety boundaries, and verifier contracts into Innerscape.
 4. Finish Task 7 in Innerscape mobile as the built-in Unstuck mode.
 5. Finish Task 8 before any real Google Calendar or Gmail OAuth work.
-6. Keep `docs/integration-dashboard.html` or the Innerscape landing page updated as the merge tracker.
+6. Keep `docs/integration-dashboard.html` updated as the merge tracker while the Innerscape surface is paused.
 
 This order keeps the sharp Unstuck behavior intact while letting Innerscape become the context layer that makes the coach smarter.

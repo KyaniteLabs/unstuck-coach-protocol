@@ -8,11 +8,13 @@ Online Unstuck stays exactly where it is. Do not touch it during this merge.
 
 Offline Unstuck should merge 100% into Innerscape. Innerscape becomes the life OS and context layer. Unstuck becomes the summonable coaching mode inside Innerscape that reads that context and returns one next humane move.
 
+Innerscape is now taken down behind a merge hold screen until the merge is complete.
+
 The important split is:
 
 - **Online Unstuck:** protected public demo/app. Keep it up and unchanged.
 - **Offline Unstuck:** local coaching protocol, prompts, safety boundaries, examples, and verifier contracts. Move these into Innerscape until there is no separate offline product to maintain.
-- **Innerscape:** the merged home. Track the merge there, or take down the Innerscape landing page if it creates confusion.
+- **Innerscape:** the merged home after the merge. Keep the public surface paused while offline Unstuck is absorbed.
 
 ## Online Unstuck Page
 
@@ -34,25 +36,32 @@ Primary CTA should remain a stuck-loop action, not a platform tour.
 
 ## Innerscape Landing Page
 
-The Innerscape page is allowed to become the merge tracker or be taken down if it is getting in the way.
+The Innerscape page is taken down for the merge. The current surface should be a hold screen, not a product promise.
 
-If kept, it should lead with the merged product:
-
-- life OS
-- emotional/body context
-- capture and memory
-- calendar and inbox reality
-- Unstuck as the built-in "I am stuck" mode
-- merge status for offline Unstuck absorption
-
-Recommended landing message:
+Hold-screen message:
 
 ```text
-Innerscape is the life OS.
-Unstuck is the one-button coaching mode inside it.
+Innerscape is offline.
+Unstuck is being merged into Innerscape.
 ```
 
-Primary CTA can be the app/home-base promise. Secondary CTA should be "What is real right now?" or "Open Unstuck mode."
+The hold screen can say only:
+
+- online Unstuck stays up and untouched
+- offline Unstuck is merging into Innerscape
+- calendar and inbox are not live connectors yet
+
+Do not restore a normal Innerscape landing/app surface until the built-in Unstuck mode, receipts, and consent boundaries are ready enough to be true.
+
+## Current Innerscape Merge State
+
+As of June 2, 2026, the Innerscape `codex/innerscape-unstuck-context` worktree has:
+
+- a root app hold screen at `apps/mobile/components/MergeHoldScreen.tsx`
+- imported offline Unstuck protocol docs under `docs/unstuck/`
+- shared deterministic Unstuck coach logic at `packages/shared/src/unstuck-coach.ts`
+- a context-aware coach route at `POST /api/v1/hub/unstuck/coach`
+- a merge verifier at `scripts/verify-unstuck-merge.mjs`
 
 ## Live Unstuck App
 
@@ -60,7 +69,7 @@ The live online Unstuck app should stay up and should not be modified during thi
 
 It is the working proof that the coaching behavior is sharp. It is not the merge target.
 
-Current implementation status on June 2, 2026:
+Parked local implementation status on June 2, 2026:
 
 - The EF-COACH local branch `codex/innerscape-unstuck-context` adds an optional Innerscape context bridge for the literal live app.
 - The bridge is opt-in with `INNERSCAPE_CONTEXT_ENABLED=true` plus `INNERSCAPE_CONTEXT_URL`.
@@ -80,8 +89,8 @@ Recommended live-app state:
 The offline merge moves in this order:
 
 1. Online Unstuck stays live and untouched.
-2. Offline Unstuck coaching protocol, examples, safety boundaries, and verifier contracts move into Innerscape.
-3. Innerscape exposes read-only context to its built-in Unstuck mode.
+2. Innerscape stays paused behind a hold screen until the merge is complete.
+3. Offline Unstuck coaching protocol, examples, safety boundaries, and verifier contracts move into Innerscape.
 4. Calendar and inbox read-only connectors add hard anchors and live obligations.
 5. Coaching receipts write back to Innerscape.
 6. Offline Unstuck stops being a separate maintained product once Innerscape has the full mode.
@@ -109,4 +118,4 @@ Default to this split:
 
 - Online Unstuck remains untouched.
 - Offline Unstuck merges 100% into Innerscape.
-- Innerscape is the durable home for context, memory, merge tracking, and the built-in Unstuck mode.
+- Innerscape remains paused behind a hold screen until the built-in Unstuck mode is complete enough to use honestly.

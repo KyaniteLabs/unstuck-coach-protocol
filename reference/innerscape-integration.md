@@ -10,9 +10,15 @@ Offline Unstuck merges 100% into Innerscape as the coaching layer that turns vis
 
 Online Unstuck is not the merge target. Keep the online app up and unchanged unless there is a separate explicit deploy request.
 
+## Current Innerscape Merge State
+
+Innerscape is paused behind a merge hold screen until offline Unstuck is fully absorbed.
+
+As of June 2, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, and a verifier for the hold/merge decision. Calendar and inbox connectors are still consent-gated future work, and coaching receipts are not persisted yet.
+
 ## Current Live-App Bridge
 
-As of June 2, 2026, the literal online Unstuck app has a local EF-COACH branch bridge, not a production claim and not a required step for the offline merge.
+As of June 2, 2026, the literal online Unstuck app has a parked local EF-COACH branch bridge, not a production claim and not a required step for the offline merge.
 
 - `INNERSCAPE_CONTEXT_ENABLED=true` and `INNERSCAPE_CONTEXT_URL` are both required before the app pulls context.
 - Non-local context URLs require `INNERSCAPE_CONTEXT_ALLOWLIST`.

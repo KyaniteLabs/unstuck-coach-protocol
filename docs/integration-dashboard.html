@@ -589,7 +589,7 @@
             </div>
             <div class="verdict-grid" aria-label="Topline metrics">
               <div class="summary-tile"><span>Offline merge target</span><strong>100%</strong><small>offline Unstuck absorbed into Innerscape</small></div>
-              <div class="summary-tile"><span>Current local progress</span><strong>90%</strong><small>local DB path, hold flag, receipts</small></div>
+              <div class="summary-tile"><span>Current local progress</span><strong>94%</strong><small>Nucbox DB pass, port flag, hold flag, receipts</small></div>
               <div class="summary-tile"><span>Connector safety</span><strong>Read</strong><small>writes require approval</small></div>
               <div class="summary-tile"><span>Online Unstuck</span><strong>Freeze</strong><small>keep up, do not touch</small></div>
             </div>
@@ -598,8 +598,8 @@
           <div class="panel status-stack" data-tags="engineering live open">
             <div>
               <p class="kicker">Offline merge progress</p>
-              <div class="progress-ring" style="--pct:90" aria-label="90 percent merged">
-                <div><strong>90%</strong><span>merged</span></div>
+              <div class="progress-ring" style="--pct:94" aria-label="94 percent merged">
+                <div><strong>94%</strong><span>merged</span></div>
               </div>
             </div>
             <div class="bars" aria-label="Merge readiness bars">
@@ -609,6 +609,7 @@
               <div class="bar-row"><span>Backend context/coach</span><div class="bar"><span style="--value:90%;--color:var(--blue)"></span></div><strong>90</strong></div>
               <div class="bar-row"><span>Receipts</span><div class="bar"><span style="--value:90%;--color:var(--green)"></span></div><strong>90</strong></div>
               <div class="bar-row"><span>Local DB setup</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div>
+              <div class="bar-row"><span>DB integration tests</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>135</strong></div>
               <div class="bar-row"><span>Calendar/inbox</span><div class="bar"><span style="--value:20%;--color:var(--saffron)"></span></div><strong>20</strong></div>
               <div class="bar-row"><span>Online app changes</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div>
             </div>
@@ -683,7 +684,7 @@
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Offline protocol imported</strong><p>Identity, rules, examples, safety boundaries, and verifier contracts are now Innerscape-owned docs.</p></div><span>medium</span></div>
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Context-aware coach route</strong><p>Innerscape can build a snapshot and return one Unstuck move plus a persisted receipt.</p></div><span>low</span></div>
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Receipts write back</strong><p>Prompt, sources, move, proof, and result now have an Innerscape storage path.</p></div><span>low</span></div>
-              <div class="timeline-item"><span class="pill done">done</span><div><strong>Clone-and-run DB path</strong><p>`npm run setup:local` starts Postgres, generates Prisma, runs migrations, and builds shared types.</p></div><span>low</span></div>
+              <div class="timeline-item"><span class="pill done">done</span><div><strong>Clone-and-run DB path</strong><p>`npm run setup:local` starts Postgres, generates Prisma, runs migrations, and builds shared types; Nucbox passed 135 DB-backed backend tests on `INNERSCAPE_DB_PORT=55432`.</p></div><span>low</span></div>
               <div class="timeline-item"><span class="pill open">open</span><div><strong>Calendar/inbox connectors</strong><p>Read-only hard anchors and live obligations behind consent.</p></div><span>medium</span></div>
               <div class="timeline-item"><span class="pill blocked">gate</span><div><strong>Offline merge complete</strong><p>Stop maintaining offline Unstuck separately once Innerscape owns the full mode.</p></div><span>high</span></div>
             </div>
@@ -691,7 +692,7 @@
         </section>
 
         <section id="merge" class="section grid-3">
-          <div class="chart-panel" data-tags="engineering done"><h3>Completed</h3><div class="bars"><div class="bar-row"><span>Docs plan</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Local DB setup</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Contract verifier</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Online freeze rule</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div></div></div>
+          <div class="chart-panel" data-tags="engineering done"><h3>Completed</h3><div class="bars"><div class="bar-row"><span>Docs plan</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Local DB setup</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Nucbox DB tests</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>135</strong></div><div class="bar-row"><span>Contract verifier</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Online freeze rule</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div></div></div>
           <div class="chart-panel" data-tags="engineering open"><h3>Offline merge work</h3><div class="bars"><div class="bar-row"><span>Context/coach route</span><div class="bar"><span style="--value:90%;--color:var(--blue)"></span></div><strong>90</strong></div><div class="bar-row"><span>Offline absorption</span><div class="bar"><span style="--value:90%;--color:var(--teal)"></span></div><strong>90</strong></div><div class="bar-row"><span>Adapters</span><div class="bar"><span style="--value:20%;--color:var(--saffron)"></span></div><strong>20</strong></div></div></div>
           <div class="chart-panel" data-tags="engineering live open privacy"><h3>Out of scope or gated</h3><div class="bars"><div class="bar-row"><span>Online app changes</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>OAuth consent</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>Hosted combo</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>no</strong></div></div></div>
         </section>
@@ -703,7 +704,7 @@
             <div class="decision-row" data-tags="landing done"><div><strong>Hosted Innerscape</strong><p>Do not host the combination.</p></div><div>Innerscape repo = open-source/local combined product.</div><div><span class="pill done">decided</span></div><div>The hold screen is opt-in and not a hosting plan.</div></div>
             <div class="decision-row" data-tags="live open done"><div><strong>Online Unstuck app</strong><p>Keep it up and untouched.</p></div><div>Not the merge target.</div><div><span class="pill done">frozen</span></div><div>No deploy/config changes.</div></div>
             <div class="decision-row" data-tags="privacy open"><div><strong>Calendar/inbox</strong><p>Read-only first.</p></div><div>Writes require explicit approval.</div><div><span class="pill next">required</span></div><div>Consent docs before OAuth.</div></div>
-            <div class="decision-row" data-tags="engineering done"><div><strong>Context storage</strong><p>Receipts write back to Innerscape.</p></div><div>Prompt, sources, move, proof, result.</div><div><span class="pill done">implemented</span></div><div>Local Postgres path and CI migration deploy are wired.</div></div>
+            <div class="decision-row" data-tags="engineering done"><div><strong>Context storage</strong><p>Receipts write back to Innerscape.</p></div><div>Prompt, sources, move, proof, result.</div><div><span class="pill done">implemented</span></div><div>Local Postgres path, configurable DB port, complete migration history, and Nucbox DB-backed tests are verified.</div></div>
             <div class="decision-row" data-tags="docs done"><div><strong>Decision artifacts</strong><p>Use HTML dashboards for review.</p></div><div>Markdown remains source; HTML is the human review surface.</div><div><span class="pill done">adopted</span></div><div>This file is the pattern.</div></div>
           </div>
         </section>

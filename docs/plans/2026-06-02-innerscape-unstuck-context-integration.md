@@ -46,7 +46,7 @@ Not completed yet:
 - The EF-COACH bridge is local only and is not part of the online Unstuck production path.
 - Google Calendar and Gmail are not connected in production.
 - The normal Innerscape app surface is intentionally unavailable until the merge gates pass.
-- Innerscape now has a local Postgres setup and CI migration verification path; DB-backed Hub route tests require that local or CI database to be running.
+- Innerscape now has a local Postgres setup with configurable `INNERSCAPE_DB_PORT`, complete migration history for DB-backed modules, and a CI migration verification path; Nucbox verified setup plus 135 backend integration tests on port `55432`.
 
 ## First Feature: What Is Real Right Now?
 

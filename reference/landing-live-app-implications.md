@@ -63,8 +63,9 @@ As of June 2, 2026, the Innerscape `codex/innerscape-unstuck-context` worktree h
 - a context-aware coach route at `POST /api/v1/hub/unstuck/coach`
 - persisted coaching receipts plus proof updates under `/api/v1/hub/unstuck/receipts`
 - a Hub Unstuck panel at `apps/mobile/components/hub/UnstuckCoachPanel.tsx`
-- local Postgres setup through `docker-compose.dev.yml` and `npm run setup:local`
+- local Postgres setup through `docker-compose.dev.yml` and `npm run setup:local`, with `INNERSCAPE_DB_PORT` for machines that already run Postgres
 - CI migration verification through `npx prisma migrate deploy`
+- Nucbox verification: `INNERSCAPE_DB_PORT=55432 npm run setup:local` and 135 backend integration tests passed
 - a merge verifier at `scripts/verify-unstuck-merge.mjs`
 
 ## Live Unstuck App

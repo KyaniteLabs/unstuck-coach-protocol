@@ -9,17 +9,17 @@
       content="Source-backed evidence for Unstuck Coach, a folder-based executive-function accessibility coach with judge-readable receipts, transcripts, and verifiers."
     >
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html">
+    <link rel="canonical" href="https://kyanitelabs.github.io/unstuck-coach-protocol/landing/evidence.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Unstuck Coach">
     <meta property="og:title" content="Unstuck Coach Evidence Reader">
     <meta property="og:description" content="Rendered Markdown receipts, transcript evidence, source notes, scorecards, and verification scripts for Unstuck Coach.">
-    <meta property="og:url" content="https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html">
-    <meta property="og:image" content="https://simongonzalezdc.github.io/unstuck-coach-week5/landing/assets/unstuck-coach-logo.png">
+    <meta property="og:url" content="https://kyanitelabs.github.io/unstuck-coach-protocol/landing/evidence.html">
+    <meta property="og:image" content="https://kyanitelabs.github.io/unstuck-coach-protocol/landing/assets/unstuck-coach-logo.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Unstuck Coach Evidence Reader">
     <meta name="twitter:description" content="Source-backed proof for a folder-based executive-function accessibility coach.">
-    <meta name="twitter:image" content="https://simongonzalezdc.github.io/unstuck-coach-week5/landing/assets/unstuck-coach-logo.png">
+    <meta name="twitter:image" content="https://kyanitelabs.github.io/unstuck-coach-protocol/landing/assets/unstuck-coach-logo.png">
     <link rel="icon" type="image/png" href="./assets/unstuck-coach-logo.png">
     <link rel="stylesheet" href="./styles.css">
   </head>
@@ -534,7 +534,7 @@
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>docs/judge-walkthrough.md</code></dd></div>
         <div><dt>Lines</dt><dd>468</dd></div>
-        <div><dt>Bytes</dt><dd>15195</dd></div>
+        <div><dt>Bytes</dt><dd>15198</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -698,7 +698,7 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
 <pre class="rendered-code" data-language="bash"><code>node scripts/build-public-bundle.mjs</code></pre>
 <p>The generated folder at <code>output/public-bundle/unstuck-coach/</code> should verify from inside itself. That folder is the clean payload for the separate Week 5 public repository after final link approval.</p>
 <p>Dry-run clean public repository staging:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public</code></pre>
+<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public</code></pre>
 <p>The helper should verify the bundle first and report a dry-run summary. Use <code>--write</code> only after the target folder is reviewed.</p>
 <p>After the final public GitHub repository exists, dry-run the link insertion:</p>
 <pre class="rendered-code" data-language="bash"><code>node scripts/prepare-publication-link.mjs --url https://github.com/OWNER/REPO</code></pre>
@@ -744,8 +744,8 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>README.md</code></dd></div>
-        <div><dt>Lines</dt><dd>438</dd></div>
-        <div><dt>Bytes</dt><dd>23466</dd></div>
+        <div><dt>Lines</dt><dd>448</dd></div>
+        <div><dt>Bytes</dt><dd>24177</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -760,6 +760,15 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
             <p>A folder-based whole-person executive-function accessibility coach for people who need help starting, switching, remembering, regulating, capturing, recovering, and closing loops without shame.</p>
 <p>Drop this folder into a Claude Project, Codex workspace, Antigravity-style AI IDE project, or local-model context and ask the coach to help with the life loop in front of you: work, home, body, admin, inbox, calendar, communication, transition, re-entry, or shutdown.</p>
 <p>The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally. When the user supplies calendar, inbox, task-pile, language, prior-conversation, or repeated-pattern context, the coach uses it as state-aware accessibility context before asking for another self-report.</p>
+          </div>
+        </details>
+<details class="rendered-section">
+          <summary><span>Repository Boundary</span><small>4 lines</small></summary>
+          <div class="rendered-section-body">
+            <p>This repository is the Unstuck Coach protocol and publication artifact. It is the folder-based coach contract, evidence layer, verifier set, and integration planning surface.</p>
+<p>It is not the hosted Unstuck app, and it is not the Innerscape app. The live product code, the local/open-source merge target, and unrelated product repos are separate repository surfaces.</p>
+<p>Offline Unstuck is being merged into Innerscape for local/open-source clone-and-run users. Do not host a combined Innerscape + Unstuck service from this repo.</p>
+<p>The full repo-ops map lives in <code>docs/repository-separation.md</code> in the source workspace. The clean publication payload stays focused on the coach artifact.</p>
           </div>
         </details>
 <details class="rendered-section">
@@ -890,7 +899,7 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
           <summary><span>Search And AI Discovery</span><small>9 lines</small></summary>
           <div class="rendered-section-body">
             <p>When the repository is made public and GitHub Pages is enabled, set the repository About homepage to:</p>
-<pre class="rendered-code" data-language="text"><code>https://simongonzalezdc.github.io/unstuck-coach-week5/landing/</code></pre>
+<pre class="rendered-code" data-language="text"><code>https://kyanitelabs.github.io/unstuck-coach-protocol/landing/</code></pre>
 <p>The front-facing discovery files are:</p>
 <ul><li><code>robots.txt</code> for crawler access and sitemap discovery.</li><li><code>sitemap.xml</code> for the landing page, evidence reader, and pitch reel URLs.</li><li><code>llms.txt</code> for answer engines, AI search, and LLM citation context.</li><li><code>landing/index.html</code> for browser metadata, Open Graph/Twitter previews, canonical URL, and structured data.</li></ul>
           </div>
@@ -984,9 +993,9 @@ node scripts/verify-final-privacy-scan.mjs</code></pre>
 <pre class="rendered-code" data-language="bash"><code>node scripts/build-public-bundle.mjs</code></pre>
 <p>This creates an ignored export at <code>output/public-bundle/unstuck-coach/</code>. After final link approval, copy that exported folder into the clean Week 5 public repository and run the verifier again from inside the copied repo.</p>
 <p>Dry-run staging into a separate clean repository folder:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public</code></pre>
+<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public</code></pre>
 <p>After reviewing the target, write it:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write</code></pre>
+<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public --write</code></pre>
           </div>
         </details>
 <details class="rendered-section">
@@ -3602,8 +3611,8 @@ Proof: [signal].</code></pre>
       </div>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>PROJECT_INSTRUCTIONS.md</code></dd></div>
-        <div><dt>Lines</dt><dd>136</dd></div>
-        <div><dt>Bytes</dt><dd>10373</dd></div>
+        <div><dt>Lines</dt><dd>145</dd></div>
+        <div><dt>Bytes</dt><dd>11205</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -3613,7 +3622,7 @@ Proof: [signal].</code></pre>
     <div class="rendered-markdown">
       <div class="rendered-section-list">
     <details class="rendered-section" open>
-          <summary><span>Claude Project Instructions</span><small>60 lines</small></summary>
+          <summary><span>Claude Project Instructions</span><small>68 lines</small></summary>
           <div class="rendered-section-body">
             <p>Paste this into the Claude Project instructions after adding the full Unstuck Coach folder as project knowledge.</p>
 <p>For Codex, Antigravity-style AI IDE projects, or local-model runners, use the same text as the system/project instruction or first message after loading the folder. If the runner cannot ingest a whole folder, load <code>PROJECT_INSTRUCTIONS.md</code>, <code>identity.md</code>, <code>rules.md</code>, <code>examples.md</code>, and the core files in <code>reference/</code> first.</p>
@@ -3629,6 +3638,9 @@ Use these project files as your operating system:
 - reference/mode-router.md gives the stance portfolio: ally support, strategy, executable next-move shaping, memory keeping, and recovery closure.
 - reference/signal-map.md maps user signals and whole-person operating surfaces to coaching moves.
 - reference/safety-boundaries.md defines clinical and crisis limits.
+- reference/innerscape-integration.md defines how Unstuck uses Innerscape, calendar, and inbox context without becoming a guilt dashboard.
+- reference/landing-live-app-implications.md defines how the Unstuck landing page, Innerscape landing page, and live Unstuck app should stay aligned during the merge.
+- reference/secure-open-source-release.md defines the security, privacy, and publisher-safety boundary for releasing Innerscape + Unstuck as local-first open source without hosting a combined service.
 - reference/source-notes.md explains the research foundation.
 - FIRST_RUN.md shows the exact cold-start receipt and tiny proof loop.
 
@@ -3653,6 +3665,12 @@ inbox, previous-conversation, language, or task-pile context, use those visible
 facts as accessibility context before asking for a state report. Name uncertainty
 when capacity is inferred. Calendar and inbox facts may drive coaching moves,
 but they must not become hidden character judgments or clinical claims.
+
+When connected to Innerscape, Innerscape is the system of record and Unstuck is
+the coaching layer. Calendar and inbox are reality inputs, not guilt
+dashboards. External writes require explicit approval: draft freely when useful,
+but do not send, delete, archive, label, RSVP, or edit external systems without
+confirmation.
 
 When the user cannot start, assume the first blocker may be a giant task pile, not ignorance. Lower the start line by taking the choosing burden off the user: &quot;Send the messy task pile as-is. Fragments are fine.&quot; If that is too much, ask for any three items. Avoid visual-contact phrasing in first-contact coaching unless the user has already named a single concrete artifact.
 
@@ -3862,7 +3880,7 @@ When the first user message is vague, start with:
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>PUBLICATION_CHECKLIST.md</code></dd></div>
         <div><dt>Lines</dt><dd>177</dd></div>
-        <div><dt>Bytes</dt><dd>10035</dd></div>
+        <div><dt>Bytes</dt><dd>10041</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -3916,7 +3934,7 @@ node scripts/verify-final-privacy-scan.mjs
 NODE_PATH=/path/to/node_modules node scripts/render-review-screenshots.mjs
 node scripts/build-public-bundle.mjs
 node scripts/verify-clean-public-stage.mjs
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public
 node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
 <p>Expected before public-link insertion:</p>
 <ul><li><code>verify-submission-copy.mjs</code> reports 2-3 Skool comment sentences.</li><li><code>verify-submission-surfaces.mjs</code> reports the Skool draft and SUBMISSION landing version are synchronized, while the landing avoids a separate submission panel.</li><li><code>verify-pitch-reel.mjs</code> reports six timed shots, a short voiceover, and zero public-unsafe private/local references.</li><li><code>verify-reel-page.mjs</code> reports six record-ready reel scenes, resolved local refs, and zero public-unsafe private/local references.</li><li><code>verify-judge-faq.mjs</code> reports eight FAQ questions, evidence references, and zero public-unsafe private/local references.</li><li><code>verify-judge-scorecard.mjs</code> reports nine criteria rows, a sequential fast scoring path, and zero public-unsafe private/local references.</li><li><code>verify-judge-brief.mjs</code> reports seven brief sections, evidence references, six fast-test steps, and zero public-unsafe private/local references.</li><li><code>verify-landing-accessibility.mjs</code> reports labelled landing sections, local hash links, image alt text, copy controls, tab behavior, focus-visible CSS, reduced-motion CSS, and zero failures.</li><li><code>verify-source-notes.mjs</code> reports source lineage, research-to-behavior rows, design-lineage bullets, portability notes, and zero public-unsafe private/local references.</li><li><code>verify-competition-rules-trace.mjs</code> reports 12 brief requirement rows, 4 judging question rows, above-the-brief proof bullets, 4 blockers, and zero public-unsafe private/local references.</li><li><code>verify-product-thesis.mjs</code> reports the folder-first product rationale, whole-person scope, proof logic, and boundaries with zero failures.</li><li><code>verify-icm-trace.mjs</code> reports the public ICM fit map, evidence references, and zero failures.</li><li><code>verify-mode-router.mjs</code> reports 5 stance rows, 5 routing rules, explicit non-coding-only execution framing, and zero failures.</li><li><code>verify-first-run.mjs</code> reports the cold-start receipt checks and zero failures.</li><li><code>verify-first-reply-scorecard.mjs</code> reports the first-reply pass/fail criteria and evidence links with zero failures.</li><li><code>verify-start-here.mjs</code> reports the 60-second path, first prompt, acceptance test, and proof links with zero failures.</li><li><code>verify-landing-copy.mjs</code> reports the landing launch-kit copy controls and target prompt text with zero failures.</li><li><code>verify-transcript-pack.mjs</code> reports 9 checked cases and zero failures.</li><li><code>verify-first-reply-acceptance.mjs</code> reports 9 checked first replies and zero failures.</li><li><code>verify-console-behavior.mjs</code> reports 9 checked behavior cases and zero failures.</li><li><code>verify-eval-coverage.mjs</code> reports 13 red-face tests, at least 12 research-to-behavior rows, and zero failures.</li><li><code>verify-admin-ops-playbooks.mjs</code> reports 5 admin operations playbooks, 5 close statuses, and zero failures.</li><li><code>verify-whole-person-tour.mjs</code> reports 6 tour stops, 6 prompt blocks, 6 proof checks, 6 immediate-fail checks, and zero failures.</li><li><code>judge-quick-proof.mjs</code> reports <code>status: &quot;pass&quot;</code> and summarizes the judge-facing proof counts without requiring the final public GitHub URL.</li><li><code>verify-public-bundle.mjs</code> reports zero failures.</li><li><code>verify-public-bundle.mjs</code> reports 83 required files, including the SEO/AEO/GEO discovery files.</li><li><code>verify-final-privacy-scan.mjs</code> reports <code>status: &quot;pass&quot;</code> and zero private/local provenance leaks across the public bundle.</li><li><code>render-review-screenshots.mjs</code> refreshes landing, narrow/mobile first-glance, evidence reader, calendar/inbox admin-band, first-run receipt, scorecard, FAQ, and reel screenshots when Playwright is available through local install or <code>NODE_PATH</code>.</li><li><code>verify-clean-public-stage.mjs</code> stages into a temporary separate folder, verifies the staged payload, removes the temporary target, and reports zero failures.</li><li><code>final-review-smoke.mjs --expect-blocked</code> reports <code>status: &quot;pass&quot;</code> before the final public link is inserted.</li><li>Warnings about the missing final GitHub link are expected while the folder is still private.</li></ul>
@@ -3932,7 +3950,7 @@ node scripts/final-review-smoke.mjs --expect-blocked</code></pre>
 <ol><li>Insert the approved final public GitHub URL in the reviewed source folder.</li><li>Run the ready gates from the reviewed source folder.</li><li>Build or stage the public payload into the clean Week 5 public repository.</li><li>Run the public-bundle and ready gates again from inside that final public repository.</li></ol>
 <p>Copy the generated payload into the clean Week 5 public repository after the approved link is present in the reviewed source folder.</p>
 <p>Or stage it with the guarded helper:</p>
-<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write --require-ready</code></pre>
+<pre class="rendered-code" data-language="bash"><code>node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public --write --require-ready</code></pre>
 <p>The <code>--require-ready</code> flag is for final publication staging. It refuses to stage if the reviewed source folder still has the placeholder URL or fails <code>verify-publication-ready.mjs</code>.</p>
 <p>If the target already contains non-git files, the helper stops unless <code>--force</code> is passed after review.</p>
 <p>From inside the copied public repository, run:</p>
@@ -4147,7 +4165,7 @@ landing/evidence.html#first-reply-scorecard</code></pre>
       <dl class="source-proof">
         <div><dt>Source</dt><dd><code>SUBMISSION.md</code></dd></div>
         <div><dt>Lines</dt><dd>28</dd></div>
-        <div><dt>Bytes</dt><dd>2309</dd></div>
+        <div><dt>Bytes</dt><dd>2308</dd></div>
       </dl>
     </header>
     <div class="section-controls" aria-label="Section display controls">
@@ -4160,7 +4178,7 @@ landing/evidence.html#first-reply-scorecard</code></pre>
           <summary><span>Submission Draft</span><small>17 lines</small></summary>
           <div class="rendered-section-body">
             <p>GitHub link:</p>
-<pre class="rendered-code" data-language="text"><code>https://github.com/simongonzalezdc/unstuck-coach-week5</code></pre>
+<pre class="rendered-code" data-language="text"><code>https://github.com/KyaniteLabs/unstuck-coach-protocol</code></pre>
 <p>Skool comment draft:</p>
 <pre class="rendered-code" data-language="text"><code>Unstuck Coach is a folder-based whole-person executive-function accessibility coach for people whose bottleneck is not intelligence or effort, but the moment life asks them to start, switch, remember, regulate, capture, recover, or close loops without shame. It is not an ADHD knowledge base or productivity extractor: it uses supplied language, inboxes, calendars, task piles, and prior context as state-aware accessibility context, then turns the real life loop into one humane concrete move with held context and tiny proof. The folder includes paste-ready Claude Project instructions, boundaries, calendar and inbox playbooks, a whole-person tour, stress tests, readable evidence, and source proof so the coach can be cold-tested from one messy stuck point.</code></pre>
 <p>Landing-page version:</p>
@@ -4996,7 +5014,7 @@ Copy one line first: the deadline line if it is visible, otherwise the contact l
     <h3>verify-public-bundle.mjs</h3>
     <p>Checks expected files and privacy boundaries.</p>
     <code>scripts/verify-public-bundle.mjs</code>
-    <small>1846 lines / 63445 bytes</small>
+    <small>1848 lines / 63538 bytes</small>
   </article>
 <article id="verify-final-privacy-scan" class="evidence-card verifier-card">
     <h3>verify-final-privacy-scan.mjs</h3>
@@ -5032,7 +5050,7 @@ Copy one line first: the deadline line if it is visible, otherwise the contact l
     <h3>stage-public-repo.mjs</h3>
     <p>Stages a separate clean public repository after approval.</p>
     <code>scripts/stage-public-repo.mjs</code>
-    <small>151 lines / 4339 bytes</small>
+    <small>151 lines / 4342 bytes</small>
   </article>
             </div>
           </section>

@@ -3,7 +3,7 @@
 GitHub link:
 
 ```text
-https://github.com/simongonzalezdc/unstuck-coach-week5
+https://github.com/KyaniteLabs/unstuck-coach-protocol
 ```
 
 Skool comment draft:

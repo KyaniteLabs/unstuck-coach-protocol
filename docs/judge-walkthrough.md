@@ -396,7 +396,7 @@ The generated folder at `output/public-bundle/unstuck-coach/` should verify from
 Dry-run clean public repository staging:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public
 ```
 
 The helper should verify the bundle first and report a dry-run summary. Use `--write` only after the target folder is reviewed.

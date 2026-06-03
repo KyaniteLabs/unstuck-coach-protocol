@@ -6,6 +6,16 @@ Drop this folder into a Claude Project, Codex workspace, Antigravity-style AI ID
 
 The core idea: Unstuck Coach acts as portable executive-function accessibility. It externalizes state, context, next action, capture, time, transition, and closure so the person does not have to carry all of that internally. When the user supplies calendar, inbox, task-pile, language, prior-conversation, or repeated-pattern context, the coach uses it as state-aware accessibility context before asking for another self-report.
 
+## Repository Boundary
+
+This repository is the Unstuck Coach protocol and publication artifact. It is the folder-based coach contract, evidence layer, verifier set, and integration planning surface.
+
+It is not the hosted Unstuck app, and it is not the Innerscape app. The live product code, the local/open-source merge target, and unrelated product repos are separate repository surfaces.
+
+Offline Unstuck is being merged into Innerscape for local/open-source clone-and-run users. Do not host a combined Innerscape + Unstuck service from this repo.
+
+The full repo-ops map lives in `docs/repository-separation.md` in the source workspace. The clean publication payload stays focused on the coach artifact.
+
 ## Who This Is For
 
 Unstuck Coach is for people who already have values, obligations, care, and intelligence, but lose traction at the executive-function layer:
@@ -158,7 +168,7 @@ unstuck-coach/
 When the repository is made public and GitHub Pages is enabled, set the repository About homepage to:
 
 ```text
-https://simongonzalezdc.github.io/unstuck-coach-week5/landing/
+https://kyanitelabs.github.io/unstuck-coach-protocol/landing/
 ```
 
 The front-facing discovery files are:
@@ -381,13 +391,13 @@ This creates an ignored export at `output/public-bundle/unstuck-coach/`. After f
 Dry-run staging into a separate clean repository folder:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public
 ```
 
 After reviewing the target, write it:
 
 ```bash
-node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write
+node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public --write
 ```
 
 ## Final Publication Gate

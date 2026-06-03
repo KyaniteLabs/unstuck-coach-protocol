@@ -570,6 +570,7 @@
         </div>
         <nav aria-label="Dashboard sections">
           <a href="#verdict">Verdict</a>
+          <a href="#repos">Repos</a>
           <a href="#landing">Landing pages</a>
           <a href="#live-app">Live app</a>
           <a href="#merge">Merge state</a>
@@ -621,6 +622,7 @@
         <div class="toolbar" aria-label="Dashboard filters">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="docs" aria-pressed="false">Docs</button>
+          <button type="button" data-filter="repo" aria-pressed="false">Repos</button>
           <button type="button" data-filter="landing" aria-pressed="false">Landing</button>
           <button type="button" data-filter="live" aria-pressed="false">Live app</button>
           <button type="button" data-filter="engineering" aria-pressed="false">Engineering</button>
@@ -629,6 +631,24 @@
           <button type="button" data-filter="done" aria-pressed="false">Done</button>
           <input id="search" type="search" placeholder="Search copy, risks, routes, source files, next actions">
         </div>
+
+        <section id="repos" class="section panel" data-tags="repo docs product done open">
+          <p class="kicker">Repository separation</p>
+          <h2>Fresh repos, separate products.</h2>
+          <p>Dev Learning Archaeologist, Innerscape, live Unstuck, and the Unstuck protocol artifact are separate repo surfaces. The split prevents the hosted app, the offline merge, and an unrelated learning diagnostic from sharing one folder again.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Repo</th><th>Role</th><th>Status</th><th>Rule</th></tr></thead>
+              <tbody>
+                <tr><td>KyaniteLabs/unstuck-coach-live</td><td>Live Unstuck product code extracted from EF-COACH.</td><td><span class="pill next">fresh</span></td><td>Push source only; do not deploy in this split.</td></tr>
+                <tr><td>KyaniteLabs/unstuck-coach-protocol</td><td>This folder: protocol docs, evidence, verifiers, and integration planning.</td><td><span class="pill next">fresh</span></td><td>Not the hosted app and not Innerscape.</td></tr>
+                <tr><td>KyaniteLabs/Innerscape</td><td>Local/open-source app that absorbs offline Unstuck as a built-in mode.</td><td><span class="pill done">merge target</span></td><td>Clone-and-run source target; no hosted combo.</td></tr>
+                <tr><td>KyaniteLabs/dev-learning-archaeologist</td><td>Forensic git-history learning diagnostic.</td><td><span class="pill blocked">separate</span></td><td>Remove EF-COACH subtree; do not rename.</td></tr>
+                <tr><td>simongonzalezdc/unstuck-coach</td><td>Existing public Unstuck protocol repo in Simon namespace.</td><td><span class="pill done">legacy</span></td><td>Do not overwrite with live app extraction.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
         <section id="landing" class="section grid-2">
           <div class="panel" data-tags="landing product open docs">
@@ -729,6 +749,7 @@
               <a href="../reference/innerscape-integration.md"><span>Innerscape integration contract</span><span class="pill done">source</span></a>
               <a href="../reference/landing-live-app-implications.md"><span>Landing and live-app implications</span><span class="pill done">source</span></a>
               <a href="../reference/secure-open-source-release.md"><span>Secure open-source release boundary</span><span class="pill done">source</span></a>
+              <a href="./repository-separation.md"><span>Repository separation map</span><span class="pill done">source</span></a>
               <a href="../PROJECT_INSTRUCTIONS.md"><span>Project instructions</span><span class="pill done">source</span></a>
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/PRD.md"><span>Innerscape PRD context-layer update</span><span class="pill done">source</span></a>
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/docs/unstuck/README.md"><span>Innerscape-owned Unstuck protocol</span><span class="pill done">source</span></a>
@@ -755,7 +776,7 @@
         </section>
 
         <section class="foot" data-tags="docs">
-          <p><strong>Decision now:</strong> online Unstuck stays untouched; do not host a combined Innerscape product; offline Unstuck merges 100% into the Innerscape repo for local/open-source users. <strong>Do not claim yet:</strong> Gmail/Calendar OAuth sync is live, Kyanite hosts user workspaces, or the offline merge is complete.</p>
+          <p><strong>Decision now:</strong> online Unstuck stays untouched; do not host a combined Innerscape product; offline Unstuck merges 100% into the Innerscape repo for local/open-source users; Dev Learning Archaeologist remains separate. <strong>Do not claim yet:</strong> Gmail/Calendar OAuth sync is live, Kyanite hosts user workspaces, or the offline merge is complete.</p>
         </section>
       </main>
     </div>

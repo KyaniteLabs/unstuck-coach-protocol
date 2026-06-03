@@ -504,17 +504,17 @@ function renderEvidencePage() {
       content="Source-backed evidence for Unstuck Coach, a folder-based executive-function accessibility coach with judge-readable receipts, transcripts, and verifiers."
     >
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html">
+    <link rel="canonical" href="https://kyanitelabs.github.io/unstuck-coach-protocol/landing/evidence.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Unstuck Coach">
     <meta property="og:title" content="Unstuck Coach Evidence Reader">
     <meta property="og:description" content="Rendered Markdown receipts, transcript evidence, source notes, scorecards, and verification scripts for Unstuck Coach.">
-    <meta property="og:url" content="https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html">
-    <meta property="og:image" content="https://simongonzalezdc.github.io/unstuck-coach-week5/landing/assets/unstuck-coach-logo.png">
+    <meta property="og:url" content="https://kyanitelabs.github.io/unstuck-coach-protocol/landing/evidence.html">
+    <meta property="og:image" content="https://kyanitelabs.github.io/unstuck-coach-protocol/landing/assets/unstuck-coach-logo.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Unstuck Coach Evidence Reader">
     <meta name="twitter:description" content="Source-backed proof for a folder-based executive-function accessibility coach.">
-    <meta name="twitter:image" content="https://simongonzalezdc.github.io/unstuck-coach-week5/landing/assets/unstuck-coach-logo.png">
+    <meta name="twitter:image" content="https://kyanitelabs.github.io/unstuck-coach-protocol/landing/assets/unstuck-coach-logo.png">
     <link rel="icon" type="image/png" href="./assets/unstuck-coach-logo.png">
     <link rel="stylesheet" href="./styles.css">
   </head>

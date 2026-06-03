@@ -303,7 +303,7 @@ const publicationChecklistRequiredText = [
   "Run the ready gates from the reviewed source folder.",
   "Run the public-bundle and ready gates again from inside that final public repository.",
   "Run this from the reviewed source folder before staging or copying into the final public repository.",
-  "node scripts/stage-public-repo.mjs --target ../unstuck-coach-week5-public --write --require-ready",
+  "node scripts/stage-public-repo.mjs --target ../unstuck-coach-protocol-public --write --require-ready",
   "The `--require-ready` flag is for final publication staging.",
   "refuses to stage if the reviewed source folder still has the placeholder URL or fails `verify-publication-ready.mjs`",
   "the public repository was staged from the wrong copy",
@@ -688,19 +688,19 @@ const readmeRequiredText = [
 const seoDiscoveryRequiredText = [
   {
     file: "robots.txt",
-    text: "Sitemap: https://simongonzalezdc.github.io/unstuck-coach-week5/sitemap.xml",
+    text: "Sitemap: https://kyanitelabs.github.io/unstuck-coach-protocol/sitemap.xml",
   },
   {
     file: "sitemap.xml",
-    text: "<loc>https://simongonzalezdc.github.io/unstuck-coach-week5/landing/</loc>",
+    text: "<loc>https://kyanitelabs.github.io/unstuck-coach-protocol/landing/</loc>",
   },
   {
     file: "sitemap.xml",
-    text: "<loc>https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html</loc>",
+    text: "<loc>https://kyanitelabs.github.io/unstuck-coach-protocol/landing/evidence.html</loc>",
   },
   {
     file: "sitemap.xml",
-    text: "<loc>https://simongonzalezdc.github.io/unstuck-coach-week5/landing/reel.html</loc>",
+    text: "<loc>https://kyanitelabs.github.io/unstuck-coach-protocol/landing/reel.html</loc>",
   },
   {
     file: "llms.txt",
@@ -712,7 +712,7 @@ const seoDiscoveryRequiredText = [
   },
   {
     file: "landing/index.html",
-    text: "<link rel=\"canonical\" href=\"https://simongonzalezdc.github.io/unstuck-coach-week5/landing/\">",
+    text: "<link rel=\"canonical\" href=\"https://kyanitelabs.github.io/unstuck-coach-protocol/landing/\">",
   },
   {
     file: "landing/index.html",
@@ -724,11 +724,11 @@ const seoDiscoveryRequiredText = [
   },
   {
     file: "landing/evidence.html",
-    text: "<link rel=\"canonical\" href=\"https://simongonzalezdc.github.io/unstuck-coach-week5/landing/evidence.html\">",
+    text: "<link rel=\"canonical\" href=\"https://kyanitelabs.github.io/unstuck-coach-protocol/landing/evidence.html\">",
   },
   {
     file: "landing/reel.html",
-    text: "<link rel=\"canonical\" href=\"https://simongonzalezdc.github.io/unstuck-coach-week5/landing/reel.html\">",
+    text: "<link rel=\"canonical\" href=\"https://kyanitelabs.github.io/unstuck-coach-protocol/landing/reel.html\">",
   },
 ];
 

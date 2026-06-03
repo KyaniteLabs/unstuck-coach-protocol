@@ -28,15 +28,18 @@ As of June 3, 2026, Innerscape has:
 - `docs/security/open-source-release-gates.md`
 - `docs/plans/2026-06-03-secure-open-source-release.md`
 - `scripts/verify-security-posture.mjs`
+- shared connector scope policy in `packages/shared/src/connectors.ts`
+- Hub connector routes for consent, disconnect, and local-context deletion
+- Hub Context tab for Calendar/Gmail control visibility
 - CI running `npm run verify:security-posture`
 - production JWT and CORS checks in backend config
 - production secret/CORS guards in the release checklist
 - local Postgres bound to `127.0.0.1`
-- Nucbox DB-backed verification for 135 backend integration tests
+- Nucbox DB-backed verification for 140 backend integration tests
 
 ## Connector Rule
 
-Calendar and Gmail are still implementation gates, not claims.
+Calendar and Gmail have local connector controls, not live OAuth sync claims.
 
 Allowed first scopes:
 
@@ -53,9 +56,8 @@ Blocked first-release scopes:
 
 ## Remaining Gates
 
-1. Build connector consent UI.
-2. Add delete/revoke flows for connector-derived local context.
-3. Add scope allowlist tests when connector code exists.
-4. Keep the online Unstuck app untouched.
-5. Stop maintaining offline Unstuck separately once Innerscape fully owns the
+1. Implement real Google OAuth token exchange and sync for self-hosted credentials.
+2. Keep write actions blocked until explicit per-action approval exists.
+3. Keep the online Unstuck app untouched.
+4. Stop maintaining offline Unstuck separately once Innerscape fully owns the
    local mode.

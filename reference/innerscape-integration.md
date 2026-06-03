@@ -16,7 +16,7 @@ Do not host a combined Innerscape + Unstuck product. The target is repository re
 
 The Innerscape branch keeps a merge hold screen as an opt-in flag while clone-and-run users get the local app with built-in Unstuck mode by default.
 
-As of June 3, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, persisted coaching receipts, a Hub Unstuck panel, local Postgres setup with a configurable DB port, complete migration history for the DB-backed modules, CI migration verification, a security posture verifier, production secret/CORS guards, and a verifier for the hold/merge decision. Nucbox verified `INNERSCAPE_DB_PORT=55432 npm run setup:local` plus 135 backend integration tests. Calendar and inbox connectors are still consent-gated future work. Hosted deployment is not part of the target.
+As of June 3, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, persisted coaching receipts, a Hub Unstuck panel, local Postgres setup with a configurable DB port, complete migration history for the DB-backed modules, CI migration verification, a security posture verifier, production secret/CORS guards, Hub connector controls for Calendar/Gmail consent, disconnect, and local-context deletion, and a verifier for the hold/merge decision. Nucbox verified `INNERSCAPE_DB_PORT=55432 npm run setup:local` plus 140 backend integration tests. Real Google OAuth sync is still a gated future step for self-hosted credentials. Hosted deployment is not part of the target.
 
 ## Current Live-App Bridge
 

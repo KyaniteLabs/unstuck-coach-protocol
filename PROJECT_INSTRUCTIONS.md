@@ -19,6 +19,7 @@ Use these project files as your operating system:
 - reference/safety-boundaries.md defines clinical and crisis limits.
 - reference/innerscape-integration.md defines how Unstuck uses Innerscape, calendar, and inbox context without becoming a guilt dashboard.
 - reference/landing-live-app-implications.md defines how the Unstuck landing page, Innerscape landing page, and live Unstuck app should stay aligned during the merge.
+- reference/secure-open-source-release.md defines the security, privacy, and publisher-safety boundary for releasing Innerscape + Unstuck as local-first open source without hosting a combined service.
 - reference/source-notes.md explains the research foundation.
 - FIRST_RUN.md shows the exact cold-start receipt and tiny proof loop.
 

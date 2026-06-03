@@ -573,6 +573,7 @@
           <a href="#landing">Landing pages</a>
           <a href="#live-app">Live app</a>
           <a href="#merge">Merge state</a>
+          <a href="#security">Security</a>
           <a href="#decisions">Decisions</a>
           <a href="#sources">Sources</a>
         </nav>
@@ -589,7 +590,7 @@
             </div>
             <div class="verdict-grid" aria-label="Topline metrics">
               <div class="summary-tile"><span>Offline merge target</span><strong>100%</strong><small>offline Unstuck absorbed into Innerscape</small></div>
-              <div class="summary-tile"><span>Current local progress</span><strong>94%</strong><small>Nucbox DB pass, port flag, hold flag, receipts</small></div>
+              <div class="summary-tile"><span>Current local progress</span><strong>96%</strong><small>security gates, Nucbox DB pass, receipts</small></div>
               <div class="summary-tile"><span>Connector safety</span><strong>Read</strong><small>writes require approval</small></div>
               <div class="summary-tile"><span>Online Unstuck</span><strong>Freeze</strong><small>keep up, do not touch</small></div>
             </div>
@@ -598,8 +599,8 @@
           <div class="panel status-stack" data-tags="engineering live open">
             <div>
               <p class="kicker">Offline merge progress</p>
-              <div class="progress-ring" style="--pct:94" aria-label="94 percent merged">
-                <div><strong>94%</strong><span>merged</span></div>
+              <div class="progress-ring" style="--pct:96" aria-label="96 percent merged">
+                <div><strong>96%</strong><span>merged</span></div>
               </div>
             </div>
             <div class="bars" aria-label="Merge readiness bars">
@@ -610,7 +611,8 @@
               <div class="bar-row"><span>Receipts</span><div class="bar"><span style="--value:90%;--color:var(--green)"></span></div><strong>90</strong></div>
               <div class="bar-row"><span>Local DB setup</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div>
               <div class="bar-row"><span>DB integration tests</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>135</strong></div>
-              <div class="bar-row"><span>Calendar/inbox</span><div class="bar"><span style="--value:20%;--color:var(--saffron)"></span></div><strong>20</strong></div>
+              <div class="bar-row"><span>Security posture</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div>
+              <div class="bar-row"><span>Calendar/inbox</span><div class="bar"><span style="--value:30%;--color:var(--saffron)"></span></div><strong>30</strong></div>
               <div class="bar-row"><span>Online app changes</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div>
             </div>
           </div>
@@ -685,6 +687,7 @@
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Context-aware coach route</strong><p>Innerscape can build a snapshot and return one Unstuck move plus a persisted receipt.</p></div><span>low</span></div>
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Receipts write back</strong><p>Prompt, sources, move, proof, and result now have an Innerscape storage path.</p></div><span>low</span></div>
               <div class="timeline-item"><span class="pill done">done</span><div><strong>Clone-and-run DB path</strong><p>`npm run setup:local` starts Postgres, generates Prisma, runs migrations, and builds shared types; Nucbox passed 135 DB-backed backend tests on `INNERSCAPE_DB_PORT=55432`.</p></div><span>low</span></div>
+              <div class="timeline-item"><span class="pill done">done</span><div><strong>Security release posture</strong><p>Local DB loopback, production secret/CORS guards, privacy docs, security docs, and `npm run verify:security-posture` are wired.</p></div><span>low</span></div>
               <div class="timeline-item"><span class="pill open">open</span><div><strong>Calendar/inbox connectors</strong><p>Read-only hard anchors and live obligations behind consent.</p></div><span>medium</span></div>
               <div class="timeline-item"><span class="pill blocked">gate</span><div><strong>Offline merge complete</strong><p>Stop maintaining offline Unstuck separately once Innerscape owns the full mode.</p></div><span>high</span></div>
             </div>
@@ -692,9 +695,15 @@
         </section>
 
         <section id="merge" class="section grid-3">
-          <div class="chart-panel" data-tags="engineering done"><h3>Completed</h3><div class="bars"><div class="bar-row"><span>Docs plan</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Local DB setup</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Nucbox DB tests</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>135</strong></div><div class="bar-row"><span>Contract verifier</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Online freeze rule</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div></div></div>
-          <div class="chart-panel" data-tags="engineering open"><h3>Offline merge work</h3><div class="bars"><div class="bar-row"><span>Context/coach route</span><div class="bar"><span style="--value:90%;--color:var(--blue)"></span></div><strong>90</strong></div><div class="bar-row"><span>Offline absorption</span><div class="bar"><span style="--value:90%;--color:var(--teal)"></span></div><strong>90</strong></div><div class="bar-row"><span>Adapters</span><div class="bar"><span style="--value:20%;--color:var(--saffron)"></span></div><strong>20</strong></div></div></div>
+          <div class="chart-panel" data-tags="engineering done"><h3>Completed</h3><div class="bars"><div class="bar-row"><span>Docs plan</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Local DB setup</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Nucbox DB tests</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>135</strong></div><div class="bar-row"><span>Security verifier</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Online freeze rule</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div></div></div>
+          <div class="chart-panel" data-tags="engineering open"><h3>Offline merge work</h3><div class="bars"><div class="bar-row"><span>Context/coach route</span><div class="bar"><span style="--value:90%;--color:var(--blue)"></span></div><strong>90</strong></div><div class="bar-row"><span>Offline absorption</span><div class="bar"><span style="--value:90%;--color:var(--teal)"></span></div><strong>90</strong></div><div class="bar-row"><span>Adapters</span><div class="bar"><span style="--value:30%;--color:var(--saffron)"></span></div><strong>30</strong></div></div></div>
           <div class="chart-panel" data-tags="engineering live open privacy"><h3>Out of scope or gated</h3><div class="bars"><div class="bar-row"><span>Online app changes</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>OAuth consent</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>0</strong></div><div class="bar-row"><span>Hosted combo</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>no</strong></div></div></div>
+        </section>
+
+        <section id="security" class="section grid-3">
+          <div class="chart-panel" data-tags="privacy engineering done"><h3>Safe defaults</h3><div class="bars"><div class="bar-row"><span>Loopback dev DB</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>yes</strong></div><div class="bar-row"><span>Prod secret guard</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>yes</strong></div><div class="bar-row"><span>Prod CORS guard</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>yes</strong></div><div class="bar-row"><span>Security verifier</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>CI</strong></div></div></div>
+          <div class="chart-panel" data-tags="privacy open"><h3>Connector policy</h3><div class="bars"><div class="bar-row"><span>Consent docs</span><div class="bar"><span style="--value:100%;--color:var(--green)"></span></div><strong>100</strong></div><div class="bar-row"><span>Scope allowlist</span><div class="bar"><span style="--value:60%;--color:var(--saffron)"></span></div><strong>docs</strong></div><div class="bar-row"><span>Delete/revoke UI</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>todo</strong></div><div class="bar-row"><span>Write actions</span><div class="bar"><span style="--value:0%;--color:var(--red)"></span></div><strong>blocked</strong></div></div></div>
+          <div class="chart-panel" data-tags="privacy done"><h3>Publisher risk</h3><div class="bars"><div class="bar-row"><span>Hosted combo</span><div class="bar"><span style="--value:0%;--color:var(--green)"></span></div><strong>no</strong></div><div class="bar-row"><span>Shared OAuth client</span><div class="bar"><span style="--value:0%;--color:var(--green)"></span></div><strong>no</strong></div><div class="bar-row"><span>Google verification</span><div class="bar"><span style="--value:0%;--color:var(--saffron)"></span></div><strong>conditional</strong></div><div class="bar-row"><span>User data processor</span><div class="bar"><span style="--value:0%;--color:var(--green)"></span></div><strong>avoid</strong></div></div></div>
         </section>
 
         <section id="decisions" class="section panel" data-tags="product landing live engineering privacy open docs">
@@ -703,6 +712,7 @@
           <div class="decision-list">
             <div class="decision-row" data-tags="landing done"><div><strong>Hosted Innerscape</strong><p>Do not host the combination.</p></div><div>Innerscape repo = open-source/local combined product.</div><div><span class="pill done">decided</span></div><div>The hold screen is opt-in and not a hosting plan.</div></div>
             <div class="decision-row" data-tags="live open done"><div><strong>Online Unstuck app</strong><p>Keep it up and untouched.</p></div><div>Not the merge target.</div><div><span class="pill done">frozen</span></div><div>No deploy/config changes.</div></div>
+            <div class="decision-row" data-tags="privacy done"><div><strong>Publisher safety</strong><p>Ship repo, not hosted data service.</p></div><div>Users bring deployment, secrets, and OAuth project.</div><div><span class="pill done">guarded</span></div><div>Security/privacy docs and CI posture checks now exist.</div></div>
             <div class="decision-row" data-tags="privacy open"><div><strong>Calendar/inbox</strong><p>Read-only first.</p></div><div>Writes require explicit approval.</div><div><span class="pill next">required</span></div><div>Consent docs before OAuth.</div></div>
             <div class="decision-row" data-tags="engineering done"><div><strong>Context storage</strong><p>Receipts write back to Innerscape.</p></div><div>Prompt, sources, move, proof, result.</div><div><span class="pill done">implemented</span></div><div>Local Postgres path, configurable DB port, complete migration history, and Nucbox DB-backed tests are verified.</div></div>
             <div class="decision-row" data-tags="docs done"><div><strong>Decision artifacts</strong><p>Use HTML dashboards for review.</p></div><div>Markdown remains source; HTML is the human review surface.</div><div><span class="pill done">adopted</span></div><div>This file is the pattern.</div></div>
@@ -717,6 +727,7 @@
               <a href="./plans/2026-06-02-innerscape-unstuck-context-integration.md"><span>Implementation plan</span><span class="pill done">source</span></a>
               <a href="../reference/innerscape-integration.md"><span>Innerscape integration contract</span><span class="pill done">source</span></a>
               <a href="../reference/landing-live-app-implications.md"><span>Landing and live-app implications</span><span class="pill done">source</span></a>
+              <a href="../reference/secure-open-source-release.md"><span>Secure open-source release boundary</span><span class="pill done">source</span></a>
               <a href="../PROJECT_INSTRUCTIONS.md"><span>Project instructions</span><span class="pill done">source</span></a>
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/PRD.md"><span>Innerscape PRD context-layer update</span><span class="pill done">source</span></a>
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/docs/unstuck/README.md"><span>Innerscape-owned Unstuck protocol</span><span class="pill done">source</span></a>
@@ -725,6 +736,10 @@
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/packages/shared/src/unstuck-coach.ts"><span>Innerscape Unstuck coach core</span><span class="pill done">source</span></a>
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/scripts/verify-unstuck-merge.mjs"><span>Innerscape merge verifier</span><span class="pill done">source</span></a>
               <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/docs/plans/2026-06-02-calendar-inbox-consent.md"><span>Calendar and inbox consent plan</span><span class="pill done">source</span></a>
+              <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/SECURITY.md"><span>Innerscape security policy</span><span class="pill done">source</span></a>
+              <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/PRIVACY.md"><span>Innerscape privacy notice</span><span class="pill done">source</span></a>
+              <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/docs/security/open-source-release-gates.md"><span>Open-source release gates</span><span class="pill done">source</span></a>
+              <a href="file:///Users/simongonzalezdecruz/workspaces/kyanite-labs/Innerscape/.worktrees/codex-innerscape-unstuck-context/scripts/verify-security-posture.mjs"><span>Security posture verifier</span><span class="pill done">source</span></a>
             </div>
           </div>
 
@@ -737,7 +752,7 @@
         </section>
 
         <section class="foot" data-tags="docs">
-          <p><strong>Decision now:</strong> online Unstuck stays untouched; do not host a combined Innerscape product; offline Unstuck merges 100% into the Innerscape repo for local/open-source users. <strong>Do not claim yet:</strong> Gmail/Calendar are connected, clone-and-run DB verification is complete, or the offline merge is complete.</p>
+          <p><strong>Decision now:</strong> online Unstuck stays untouched; do not host a combined Innerscape product; offline Unstuck merges 100% into the Innerscape repo for local/open-source users. <strong>Do not claim yet:</strong> Gmail/Calendar are connected, Kyanite hosts user workspaces, or the offline merge is complete.</p>
         </section>
       </main>
     </div>

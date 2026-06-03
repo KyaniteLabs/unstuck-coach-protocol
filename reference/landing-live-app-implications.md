@@ -66,6 +66,7 @@ As of June 2, 2026, the Innerscape `codex/innerscape-unstuck-context` worktree h
 - local Postgres setup through `docker-compose.dev.yml` and `npm run setup:local`, with `INNERSCAPE_DB_PORT` for machines that already run Postgres
 - CI migration verification through `npx prisma migrate deploy`
 - Nucbox verification: `INNERSCAPE_DB_PORT=55432 npm run setup:local` and 135 backend integration tests passed
+- security release posture through `SECURITY.md`, `PRIVACY.md`, `docs/security/open-source-release-gates.md`, production secret/CORS guards, and `npm run verify:security-posture`
 - a merge verifier at `scripts/verify-unstuck-merge.mjs`
 
 ## Live Unstuck App
@@ -115,6 +116,7 @@ Not allowed yet:
 - "Connect Gmail and Google Calendar now."
 - "Unstuck reads your inbox."
 - "The app automatically handles your email."
+- "Kyanite hosts your Innerscape + Unstuck workspace."
 - "Innerscape is fully merged with offline Unstuck" until the full offline merge is actually complete.
 
 ## Decision Default

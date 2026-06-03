@@ -10,11 +10,13 @@ Offline Unstuck merges 100% into Innerscape as the coaching layer that turns vis
 
 Online Unstuck is not the merge target. Keep the online app up and unchanged unless there is a separate explicit deploy request.
 
+Do not host a combined Innerscape + Unstuck product. The target is repository readiness: people who clone and run Innerscape from source should get the built-in Unstuck mode.
+
 ## Current Innerscape Merge State
 
-Innerscape is paused behind a merge hold screen until offline Unstuck is fully absorbed.
+The Innerscape branch is paused behind a merge hold screen until offline Unstuck is fully absorbed for local/open-source use.
 
-As of June 2, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, persisted coaching receipts, a Hub Unstuck panel, and a verifier for the hold/merge decision. Calendar and inbox connectors are still consent-gated future work.
+As of June 2, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, persisted coaching receipts, a Hub Unstuck panel, and a verifier for the hold/merge decision. Calendar and inbox connectors are still consent-gated future work. Hosted deployment is not part of the target.
 
 ## Current Live-App Bridge
 

@@ -8,13 +8,13 @@ Online Unstuck stays exactly where it is. Do not touch it during this merge.
 
 Offline Unstuck should merge 100% into Innerscape. Innerscape becomes the life OS and context layer. Unstuck becomes the summonable coaching mode inside Innerscape that reads that context and returns one next humane move.
 
-Innerscape is now taken down behind a merge hold screen until the merge is complete.
+Innerscape does not need to be hosted as a combined product. The Innerscape repo branch is behind a merge hold screen until the local/open-source merge is complete.
 
 The important split is:
 
 - **Online Unstuck:** protected public demo/app. Keep it up and unchanged.
 - **Offline Unstuck:** local coaching protocol, prompts, safety boundaries, examples, and verifier contracts. Move these into Innerscape until there is no separate offline product to maintain.
-- **Innerscape:** the merged home after the merge. Keep the public surface paused while offline Unstuck is absorbed.
+- **Innerscape:** the merged open-source/local home after the merge. Keep the repo branch paused while offline Unstuck is absorbed.
 
 ## Online Unstuck Page
 
@@ -36,7 +36,7 @@ Primary CTA should remain a stuck-loop action, not a platform tour.
 
 ## Innerscape Landing Page
 
-The Innerscape page is taken down for the merge. The current surface should be a hold screen, not a product promise.
+The Innerscape branch is held for the merge. The current surface should be a hold screen, not a hosted product promise.
 
 Hold-screen message:
 
@@ -51,7 +51,7 @@ The hold screen can say only:
 - offline Unstuck is merging into Innerscape
 - calendar and inbox are not live connectors yet
 
-Do not restore a normal Innerscape landing/app surface until the built-in Unstuck mode, receipts, and consent boundaries are ready enough to be true.
+Do not restore a normal Innerscape local app surface until the built-in Unstuck mode, receipts, and consent boundaries are ready enough for clone-and-run users.
 
 ## Current Innerscape Merge State
 
@@ -82,7 +82,7 @@ Parked local implementation status on June 2, 2026:
 Recommended live-app state:
 
 - Keep the existing standalone app/demo available.
-- Do not deploy the local bridge unless explicitly approved later.
+- Do not deploy the local bridge.
 - Do not use the online app as the place to track the merge.
 - Keep the fallback behavior and current online app intact.
 
@@ -91,7 +91,7 @@ Recommended live-app state:
 The offline merge moves in this order:
 
 1. Online Unstuck stays live and untouched.
-2. Innerscape stays paused behind a hold screen until the merge is complete.
+2. Innerscape stays paused behind a repo-local hold screen until the merge is complete.
 3. Offline Unstuck coaching protocol, examples, safety boundaries, and verifier contracts move into Innerscape.
 4. Calendar and inbox read-only connectors add hard anchors and live obligations.
 5. Coaching receipts write back to Innerscape.
@@ -120,4 +120,4 @@ Default to this split:
 
 - Online Unstuck remains untouched.
 - Offline Unstuck merges 100% into Innerscape.
-- Innerscape remains paused behind a hold screen until the built-in Unstuck mode is complete enough to use honestly.
+- Innerscape remains paused behind a hold screen until the built-in Unstuck mode is complete enough for local/open-source use.

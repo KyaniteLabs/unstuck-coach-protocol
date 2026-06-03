@@ -8,7 +8,7 @@ Online Unstuck stays exactly where it is. Do not touch it during this merge.
 
 Offline Unstuck should merge 100% into Innerscape. Innerscape becomes the life OS and context layer. Unstuck becomes the summonable coaching mode inside Innerscape that reads that context and returns one next humane move.
 
-Innerscape does not need to be hosted as a combined product. The Innerscape repo branch is behind a merge hold screen until the local/open-source merge is complete.
+Innerscape does not need to be hosted as a combined product. The Innerscape repo branch keeps a merge hold screen as an opt-in flag while the local/open-source app defaults to built-in Unstuck mode.
 
 The important split is:
 
@@ -36,7 +36,7 @@ Primary CTA should remain a stuck-loop action, not a platform tour.
 
 ## Innerscape Landing Page
 
-The Innerscape branch is held for the merge. The current surface should be a hold screen, not a hosted product promise.
+The Innerscape branch has an opt-in hold screen for merge review. The normal clone-and-run surface should be the local app, not a hosted product promise.
 
 Hold-screen message:
 
@@ -63,6 +63,8 @@ As of June 2, 2026, the Innerscape `codex/innerscape-unstuck-context` worktree h
 - a context-aware coach route at `POST /api/v1/hub/unstuck/coach`
 - persisted coaching receipts plus proof updates under `/api/v1/hub/unstuck/receipts`
 - a Hub Unstuck panel at `apps/mobile/components/hub/UnstuckCoachPanel.tsx`
+- local Postgres setup through `docker-compose.dev.yml` and `npm run setup:local`
+- CI migration verification through `npx prisma migrate deploy`
 - a merge verifier at `scripts/verify-unstuck-merge.mjs`
 
 ## Live Unstuck App
@@ -91,7 +93,7 @@ Recommended live-app state:
 The offline merge moves in this order:
 
 1. Online Unstuck stays live and untouched.
-2. Innerscape stays paused behind a repo-local hold screen until the merge is complete.
+2. Innerscape keeps a repo-local hold screen as an opt-in merge review flag.
 3. Offline Unstuck coaching protocol, examples, safety boundaries, and verifier contracts move into Innerscape.
 4. Calendar and inbox read-only connectors add hard anchors and live obligations.
 5. Coaching receipts write back to Innerscape.
@@ -120,4 +122,4 @@ Default to this split:
 
 - Online Unstuck remains untouched.
 - Offline Unstuck merges 100% into Innerscape.
-- Innerscape remains paused behind a hold screen until the built-in Unstuck mode is complete enough for local/open-source use.
+- Innerscape keeps the hold screen as an opt-in merge flag; clone-and-run defaults to the built-in local Unstuck mode.

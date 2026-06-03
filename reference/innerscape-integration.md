@@ -14,9 +14,9 @@ Do not host a combined Innerscape + Unstuck product. The target is repository re
 
 ## Current Innerscape Merge State
 
-The Innerscape branch is paused behind a merge hold screen until offline Unstuck is fully absorbed for local/open-source use.
+The Innerscape branch keeps a merge hold screen as an opt-in flag while clone-and-run users get the local app with built-in Unstuck mode by default.
 
-As of June 2, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, persisted coaching receipts, a Hub Unstuck panel, and a verifier for the hold/merge decision. Calendar and inbox connectors are still consent-gated future work. Hosted deployment is not part of the target.
+As of June 2, 2026, the Innerscape merge branch has the offline Unstuck protocol copied into Innerscape-owned docs, a shared Unstuck coach core, a backend coach route, persisted coaching receipts, a Hub Unstuck panel, local Postgres setup, CI migration verification, and a verifier for the hold/merge decision. Calendar and inbox connectors are still consent-gated future work. Hosted deployment is not part of the target.
 
 ## Current Live-App Bridge
 

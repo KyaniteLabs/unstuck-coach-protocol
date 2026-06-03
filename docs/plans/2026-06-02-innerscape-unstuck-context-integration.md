@@ -32,7 +32,7 @@ Human review surface:
 Completed locally:
 
 - Unstuck integration contract, landing/live-app implications, verifier, and HTML decision dashboard exist on `codex/innerscape-unstuck-context`.
-- Innerscape is paused behind a merge hold screen on the Innerscape `codex/innerscape-unstuck-context` worktree as a repo-readiness gate, not a hosted product plan.
+- Innerscape keeps a merge hold screen on the Innerscape `codex/innerscape-unstuck-context` worktree as an opt-in repo-readiness gate, not a hosted product plan.
 - Offline Unstuck protocol docs have been imported into Innerscape under `docs/unstuck/`.
 - Innerscape shared context contract, deterministic Unstuck coach core, backend Hub context route, backend coach route, persisted coaching receipts, Hub Unstuck panel, and calendar/inbox consent plan exist on the Innerscape `codex/innerscape-unstuck-context` worktree.
 - The literal EF-COACH live app branch `codex/innerscape-unstuck-context` adds an optional Innerscape context bridge:
@@ -46,7 +46,7 @@ Not completed yet:
 - The EF-COACH bridge is local only and is not part of the online Unstuck production path.
 - Google Calendar and Gmail are not connected in production.
 - The normal Innerscape app surface is intentionally unavailable until the merge gates pass.
-- Innerscape DB-backed Hub route tests still need a reachable local PostgreSQL-backed verification pass.
+- Innerscape now has a local Postgres setup and CI migration verification path; DB-backed Hub route tests require that local or CI database to be running.
 
 ## First Feature: What Is Real Right Now?
 
@@ -915,7 +915,7 @@ Manual smoke:
 ## Recommended Execution Order
 
 1. Freeze the online Unstuck app as-is.
-2. Keep Innerscape behind the repo-local merge hold screen until clone-and-run users can get an honest built-in Unstuck mode.
+2. Keep the repo-local merge hold screen as an opt-in flag while clone-and-run users get the built-in Unstuck mode by default.
 3. Move the offline Unstuck coaching protocol, examples, rules, safety boundaries, and verifier contracts into Innerscape.
 4. Finish Task 7 in Innerscape mobile as the built-in Unstuck mode.
 5. Finish Task 8 before any real Google Calendar or Gmail OAuth work.

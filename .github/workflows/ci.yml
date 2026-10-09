@@ -14,12 +14,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  private-ready-gate:
-    # This private review repo currently has no registered self-hosted runner, and
-    # hosted Actions are billing-gated. Enable this only when a free runner lane
-    # or intentional public-release Actions budget is available.
-    if: vars.ENABLE_PRIVATE_REVIEW_CI == 'true'
-    runs-on: ubuntu-latest
+  publication-gate:
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     timeout-minutes: 10
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -28,5 +24,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Run private-ready publication smoke
-        run: node scripts/final-review-smoke.mjs --expect-private-ready --skip-build
+      - name: Run publication smoke (repo is public)
+        run: node scripts/final-review-smoke.mjs --expect-ready --skip-build

@@ -165,7 +165,7 @@ unstuck-coach/
 
 ## Search And AI Discovery
 
-When the repository is made public and GitHub Pages is enabled, set the repository About homepage to:
+The repository is public; GitHub Pages is not enabled yet, so the landing URL below does not resolve today. Once Pages is enabled, set the repository About homepage to:
 
 ```text
 https://kyanitelabs.github.io/unstuck-coach-protocol/landing/
@@ -445,3 +445,7 @@ If it asks one useful question, names the friction without shame, and helps you 
 ## Safety Note
 
 This is a coaching scaffold, not medical care or therapy. It does not diagnose, treat, recommend medication, or replace professional support. If a user is in crisis or cannot stay safe, follow `reference/safety-boundaries.md`.
+
+## License
+
+Apache-2.0. See [LICENSE](LICENSE).

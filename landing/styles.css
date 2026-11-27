@@ -59,7 +59,6 @@ html.evidence-reader-shell {
 }
 
 body {
-  min-width: 320px;
   margin: 0;
   background:
     linear-gradient(90deg, rgba(6, 9, 16, 0.018) 0 1px, transparent 1px 142px),

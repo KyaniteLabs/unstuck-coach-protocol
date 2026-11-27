@@ -115,6 +115,7 @@ unstuck-coach/
 │   ├── prepare-publication-link.mjs
 │   ├── public-bundle-files.mjs
 │   ├── build-evidence-page.mjs
+│   ├── verify-readme-structure.mjs
 │   ├── render-review-screenshots.mjs
 │   ├── verify-landing-accessibility.mjs
 │   ├── verify-source-notes.mjs
@@ -163,20 +164,7 @@ unstuck-coach/
 
 ## How To Use
 
-## Search And AI Discovery
-
-The repository is public; GitHub Pages is not enabled yet, so the landing URL below does not resolve today. Once Pages is enabled, set the repository About homepage to:
-
-```text
-https://kyanitelabs.github.io/unstuck-coach-protocol/landing/
-```
-
-The front-facing discovery files are:
-
-- `robots.txt` for crawler access and sitemap discovery.
-- `sitemap.xml` for the landing page, evidence reader, and pitch reel URLs.
-- `llms.txt` for answer engines, AI search, and LLM citation context.
-- `landing/index.html` for browser metadata, Open Graph/Twitter previews, canonical URL, and structured data.
+Pick the path that matches the AI workspace you run:
 
 ### Claude Project
 
@@ -220,6 +208,21 @@ Use a local runner with enough context to hold the operating files. If it cannot
 - `reference/safety-boundaries.md`
 
 Then start with one cold prompt from `START_HERE.md`.
+
+## Search And AI Discovery
+
+The repository is public; GitHub Pages is not enabled yet, so the landing URL below does not resolve today. Once Pages is enabled, set the repository About homepage to:
+
+```text
+https://kyanitelabs.github.io/unstuck-coach-protocol/landing/
+```
+
+The front-facing discovery files are:
+
+- `robots.txt` for crawler access and sitemap discovery.
+- `sitemap.xml` for the landing page, evidence reader, and pitch reel URLs.
+- `llms.txt` for answer engines, AI search, and LLM citation context.
+- `landing/index.html` for browser metadata, Open Graph/Twitter previews, canonical URL, and structured data.
 
 ## Quick Evaluation Path
 
@@ -320,6 +323,7 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `reference/admin-ops-playbooks.md` gives operational calendar and inbox playbooks for hard-anchor recovery, live-obligation rescue, reply debt, missed obligations, and scheduling friction without claiming account access.
 - `scripts/prepare-publication-link.mjs` dry-runs or writes the approved repository URL into `SUBMISSION.md`.
 - `scripts/build-evidence-page.mjs` renders the actual Markdown receipts into `landing/evidence.html` so proof clicks show readable source-backed content instead of hand-typed claim cards.
+- `scripts/verify-readme-structure.mjs` checks that no README heading is an empty section, that the four run-instruction subsections sit under How To Use, and that `landing/evidence.html` is the current render of the README.
 - `scripts/render-review-screenshots.mjs` refreshes the landing, narrow/mobile first-glance, evidence reader, admin-band, first-run receipt, scorecard, FAQ, and reel screenshots for design approval using standard Playwright.
 - `scripts/verify-landing-accessibility.mjs` checks landing semantics, labeled controls, hash targets, reduced-motion handling, focus-visible treatment, and accessibility behavior wiring.
 - `scripts/verify-source-notes.mjs` checks the public source notes for competition fit, design lineage, research translation, portability, and private-provenance safety.

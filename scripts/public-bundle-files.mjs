@@ -49,6 +49,7 @@ export const publicBundleFiles = [
   "scripts/prepare-publication-link.mjs",
   "scripts/public-bundle-files.mjs",
   "scripts/build-evidence-page.mjs",
+  "scripts/verify-readme-structure.mjs",
   "scripts/render-review-screenshots.mjs",
   "scripts/verify-landing-accessibility.mjs",
   "scripts/verify-source-notes.mjs",

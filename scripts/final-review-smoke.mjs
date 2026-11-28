@@ -61,6 +61,7 @@ const proofChecks = [
   "scripts/judge-quick-proof.mjs",
   "scripts/verify-public-bundle.mjs",
   "scripts/verify-readme-structure.mjs",
+  "scripts/verify-advertised-urls-test.mjs",
   "scripts/verify-final-privacy-scan.mjs",
   "scripts/verify-clean-public-stage.mjs",
 ];

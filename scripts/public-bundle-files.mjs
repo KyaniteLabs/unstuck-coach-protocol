@@ -50,6 +50,8 @@ export const publicBundleFiles = [
   "scripts/public-bundle-files.mjs",
   "scripts/build-evidence-page.mjs",
   "scripts/verify-readme-structure.mjs",
+  "scripts/verify-advertised-urls.mjs",
+  "scripts/verify-advertised-urls-test.mjs",
   "scripts/render-review-screenshots.mjs",
   "scripts/verify-landing-accessibility.mjs",
   "scripts/verify-source-notes.mjs",

@@ -116,6 +116,8 @@ unstuck-coach/
 │   ├── public-bundle-files.mjs
 │   ├── build-evidence-page.mjs
 │   ├── verify-readme-structure.mjs
+│   ├── verify-advertised-urls.mjs
+│   ├── verify-advertised-urls-test.mjs
 │   ├── render-review-screenshots.mjs
 │   ├── verify-landing-accessibility.mjs
 │   ├── verify-source-notes.mjs
@@ -223,6 +225,14 @@ The front-facing discovery files are:
 - `sitemap.xml` for the landing page, evidence reader, and pitch reel URLs.
 - `llms.txt` for answer engines, AI search, and LLM citation context.
 - `landing/index.html` for browser metadata, Open Graph/Twitter previews, canonical URL, and structured data.
+
+To check whether every URL the repository advertises actually resolves, run:
+
+```bash
+node scripts/verify-advertised-urls.mjs
+```
+
+It requests each advertised URL with one anonymous GET, names the ones that do not resolve, and exits non-zero while any of them is dead. `--base-url ORIGIN` runs the same checks against a fixed target that serves this folder under its repository path, so the passing state can be proven before the pages are live; `scripts/verify-advertised-urls-test.mjs` proves both outcomes against loopback targets only.
 
 ## Quick Evaluation Path
 
@@ -353,6 +363,8 @@ I have 25 minutes before I leave and think I can finish the whole pile.
 - `scripts/verify-final-privacy-scan.mjs` gives the final post-link privacy pass a named command instead of leaving it as a manual grep ritual.
 - `scripts/verify-publication-ready.mjs` is the final posting gate after the public GitHub link is inserted; it rejects the old Week 3 repo and reruns the proof-layer checks, including source-note lineage, landing accessibility, whole-person tour coverage, and mode routing.
 - `scripts/verify-github-public-url.mjs` checks that the approved repository URL is visible through unauthenticated GitHub API access.
+- `scripts/verify-advertised-urls.mjs` requests every URL the repository advertises with an anonymous GET and exits non-zero while any of them fails to resolve; `--base-url ORIGIN` runs the same checks against a fixed target.
+- `scripts/verify-advertised-urls-test.mjs` proves that the advertised-URL check reports both outcomes against loopback targets only, without touching the network.
 - `scripts/final-review-smoke.mjs` runs the proof checks in one concise command, rebuilds the public payload unless skipped, and verifies whether the publication gate is expected to be blocked or ready.
 - `scripts/verify-clean-public-stage.mjs` stages the payload into a temporary separate folder, verifies it there, and removes the temporary target.
 - `scripts/build-public-bundle.mjs` exports the clean public repo payload after the source bundle verifies.
